@@ -2,22 +2,73 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@material-tailwind/react";
+import { useEffect, useState } from "react";
+import {
+  Navbar,
+  MobileNav,
+  Typography,
+  IconButton,
+  Menu,
+  MenuList,
+  MenuHandler,
+  MenuItem,
+} from "@material-tailwind/react";
 
+import { Bars3Icon } from "@heroicons/react/24/outline";
 export default function Header() {
   const router = useRouter();
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const navbarHeight = 120; // Set your navbar height here
+  const [openNav, setOpenNav] = useState(false);
+
+  useEffect(() => {
+    // window.addEventListener(
+    //   "resize",
+    //   () => window.innerWidth >= 960 && setOpenNav(false)
+    // );
+  }, []);
+
+  const handleScroll = () => {
+    if (typeof window !== "undefined") {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > navbarHeight) {
+        setIsVisible(false); // Hide navbar on scroll down
+      } else {
+        setIsVisible(true); // Show navbar on scroll up
+      }
+
+      setLastScrollY(currentScrollY);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
-    <div className="flex">
-      <div className="flex w-full h-[130px] px-8 justify-between items-center  bg-[#0C0834]">
+    <Navbar
+      style={{ zIndex: 100, boxShadow: "0 2px 20px rgba(255,255,255,0.7)" }}
+      className={` border-0 top-0 p-0 w-full left-0 w-full transition-transform duration-1000 ${
+        isVisible ? "translate-y-0 " : `-translate-y-[${navbarHeight}px] fixed`
+      } shadow`}
+      // Ensure the navbar has a set height
+    >
+      <div
+        className={`flex w-full ${
+          isVisible ? "lg:h-[110px] h-[60px]" : "h-[60px]"
+        }  px-8 justify-between items-center  bg-[#0C0834]`}>
         <img
           src="./img/logo.png"
-          width="200"
-          height="73"
+          width="120"
+          height="63"
           alt="Logo"
           className="object-contain"></img>
 
-        <div className="flex">
-          <nav class="space-x-2 text-[1.3vw] flex items-center text-white">
+        <div className="flex hidden lg:flex">
+          <nav class=" text-[1.3vw] flex items-center text-white">
             <a
               href="#"
               className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
@@ -49,12 +100,76 @@ export default function Header() {
               Contact Us
             </a>
           </nav>
-          <Button className="bg-[#D0098D] rounded-[30px] text-[25px] normal-case ml-4 font-normal flex">
-            Schedule a Call
-            <img src="./img/phone.png" width={25} className="ml-3 mt-2"></img>
-          </Button>
+          <div className="flex items-center py-8">
+            {" "}
+            <Button className="bg-[#D0098D] rounded-[30px] text-[20px] normal-case ml-4 font-normal flex ">
+              Schedule a Call
+              <img src="./img/phone.png" width={20} className="ml-3 mt-1"></img>
+            </Button>
+          </div>
         </div>
+        <Menu placement="bottom-end">
+          <MenuHandler>
+            <IconButton
+              variant="text"
+              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              ripple={false}
+              onClick={() => setOpenNav(!openNav)}>
+              {openNav ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  className="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </IconButton>
+          </MenuHandler>
+          <MenuList>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Home
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Managed Services
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Affilu by Starter
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              QuestTracker
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Pricing
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Schedule a call
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              Contact US
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </div>
-    </div>
+    </Navbar>
   );
 }

@@ -164,3 +164,57 @@ input {
 .ag-theme-dark .ag-row-odd {
   background-color: #383838; /* Odd row background color */
 }
+
+
+/* styles/globals.css */
+.floating-image {
+  animation: float 3s ease-in-out infinite; /* Animation settings */
+}
+
+.floating-image1 {
+  animation: float 2s ease-in-out infinite; /* Animation settings */
+}
+
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0); /* Start and end at original position */
+  }
+  50% {
+      transform: translateY(-10px); /* Move up 10px */
+  }
+}
+
+
+.card {
+  background-image: url('../../public/img/bg/mast1.png'); /* Default background image */
+}
+.service {
+  background-image: url('../../public/img/mobile/bg-2-1.png'); /* Default background image */
+}
+
+
+@media (min-width: 768px) {
+  .card {
+      background-image: url('../../public/img/archieve.png'); /* Change image for medium screens */
+  }
+  .service {
+    background-image: url('../../public/img/bg/bg-2-1.png'); /* Default background image */
+  }
+}
+
+@keyframes scaleEffect {
+  0% {
+      transform: scale(1); /* Twice smaller */
+  }
+  50% {
+      transform: scale(0.8); /* Larger */
+  }
+  100% {
+      transform: scale(1.1); /* Original size */
+  }
+}
+
+.hover\:animate-scale:hover {
+  animation: scaleEffect 1s ease forwards;
+}

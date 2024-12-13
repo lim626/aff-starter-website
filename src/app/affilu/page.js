@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-4">
+      <div className="flex flex-col items-center justify-center mt-8">
         <p className=" text-[3vw] font-bold text-[#70E8FC] leading-none">
           Ready to elevate your{" "}
         </p>

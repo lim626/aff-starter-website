@@ -18,50 +18,101 @@ import {
 import Footer from "./components/footer";
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+  const questDiv = useRef(null);
   const router = useRouter();
+  const [buttonText, setButtonText] = useState("Learn More About Our Services");
+  const [questtop, setQuesttop] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+  const handleResize = () => {
+    setQuesttop(questDiv.current.getBoundingClientRect().top);
+    console.log(questDiv.current.getBoundingClientRect().top);
+    if (window.innerWidth >= 1024) {
+      // lg breakpoint
+      setButtonText("Learn More About Our Services");
+    } else {
+      setButtonText("Learn More");
+    }
+  };
+
+  useEffect(() => {
+    // Set initial button text
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <main className="flex w-full flex-col min-h-screen ">
-      {/* <div className="bg-white">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            AI-Powered Outbound Sales{" "}
-            <span className="text-bo6-theme"> Dashboard</span>
-          </h1>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="lg:w-1/2"></motion.div>
-      </div> */}
-
       <div className="flex w-full relative">
         <img
           src="./img/ring.png"
-          className="absolute mt-[6vw] ml-[7vw]"
+          className="absolute mt-[6vw] ml-[7vw] hidden lg:block"
           width={100}
           style={{
             zIndex: 1,
           }}></img>
         <div
           style={{ zIndex: 10 }}
-          className="w-[45%] mt-[8vw] ml-[14vw] md:text-5xl xxl:text-6xl">
-          <p class=" text-black font-bold ">Empowering</p>
-          <p class=" text-black font-bold">iGaming Brands</p>
-          <p class=" text-[#6DE0F6] font-bold  underline">to Grow and Thrive</p>
-          <p className="text-black xxl:text-3xl text-2xl mt-12">
-            Comprehensive Managed Services, Social Gamification Solutions, and
-            Quality Affiliate Traffic—All in One Place.
-          </p>
-          <Button className="bg-[#F25411] flex text-xl items-center rounded-[30px] mt-10">
-            Get Started <img src="./img/icon_start.png" className="ml-2"></img>
-          </Button>
-          <div className="mt-16 flex">
+          className="w-[full] lg:w-[45%] mt-0 lg:mt-[100px] lg:ml-[14vw] text-[30px] lg:text-6xl leading-[1.1]">
+          <div className="lg:hidden block">
+            <img src="./img/mobile/1.png"></img>
+          </div>
+          <div className="mt-4 flex flex-col justify-center px-[10%] text-center lg:justify-start lg:px-0 lg:text-start">
+            <motion.p
+              initial={{ opacity: 0, z: 20 }}
+              animate={{ opacity: 1, z: 0 }}
+              transition={{ duration: 0.3 }}
+              class=" text-black font-bold">
+              Empowering
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, z: 20 }}
+              animate={{ opacity: 1, z: 0 }}
+              transition={{ duration: 0.3 }}
+              class=" text-black font-bold">
+              iGaming Brands
+            </motion.p>
+            <div className="relative inline-block">
+              <motion.p
+                initial={{ opacity: 0, z: 20 }}
+                animate={{ opacity: 1, z: 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-[#6DE0F6] font-bold">
+                to Grow and Thrive
+              </motion.p>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 0.8 }}
+                className="absolute h-1 bg-[#6DE0F6]  bottom-[-4] left-0"
+              />
+            </div>
+            <p className="text-black xxl:text-3xl text-[20px] leading-[1.3] mt-12">
+              Comprehensive Managed Services, Social Gamification Solutions, and
+              Quality Affiliate Traffic—All in One Place.
+            </p>
+            <div className="flex lg:justify-start justify-center">
+              <Button className="bg-[#F25411] flex lg:text-xl text-[20px] items-center rounded-[30px] mt-10">
+                Get Started{" "}
+                <img
+                  src="./img/icon_start.png"
+                  className="ml-2 hidden lg:block"></img>
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-16 flex hidden lg:flex">
             <img src="./img/mark1.png" className="mr-4 h-[30px]"></img>
             <img src="./img/mark2.png" className="mr-4 h-[30px]"></img>
             <img src="./img/mark3.png" className="mr-4 h-[30px]"></img>
@@ -69,29 +120,43 @@ export default function Home() {
           </div>
         </div>
         <div
-          className="w-[55%]"
+          className="w-0 lg:w-[55%] relative hidden lg:block"
           style={{
             backgroundImage: "url(./img/bg/bg-1-2.png)",
             backgroundSize: "contain",
-            backgroundPosition: "right",
+            backgroundPosition: "right top",
             backgroundRepeat: "no-repeat",
-          }}></div>
+          }}>
+          <div className="w-[300px] floating-image absolute right-0 top-[150px]">
+            <img src="./img/animation/1.png"></img>
+          </div>
+          <div className="w-[400px] floating-image1 absolute right-12 top-[200px]">
+            <img src="./img/animation/2.png"></img>
+          </div>
+        </div>
       </div>
-      <div className="">
+      <div className="relative mt-4 w-[]" style={{ zIndex: 10 }}>
         <div
-          className="px-[10%] xxl:px-[15%] "
+          className="absolute w-[25vw] top-[600px] hidden lg:block left-24"
+          style={{ zIndex: 0 }}>
+          <img src="./img/image 2.png"></img>
+        </div>
+        <div
+          className="px-[10%] service xxl:px-[15%] "
           style={{
-            backgroundImage: "url(./img/bg/bg-2-1.png)",
-            // backgroundSize: "contain",
+            // backgroundImage: "url(./img/bg/bg-2-1.png)",
+            backgroundSize: "cover",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="flex flex-col  items-center mx-auto text-white  pt-52 pb-32">
-            <span className="text-5xl font-bold flex">
+          <div
+            style={{ zIndex: 3 }}
+            className="flex flex-col relative  items-center text-center mx-auto text-white  lg:pt-44 pt-44 pb-12">
+            <p className="lg:text-5xl text-3xl font-bold ">
               Managed Services to{" "}
-              <p className="text-[#6DE0F6] ml-2"> Elevate Your Brand</p>
-            </span>
-            <p className="text-3xl px-[10%] xxl:px-[10%] text-center mt-8">
+              <span className="text-[#6DE0F6] ml-2"> Elevate Your Brand</span>
+            </p>
+            <p className="lg:text-2xl text-[18px]  lg:px-[10%] text-center mt-8">
               Aff-Starter offers a full suite of managed services designed to
               drive player retention, boost traffic, and deliver top-tier
               customer support. From affiliate management to social media
@@ -99,60 +164,63 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-end">
+          <div className="lg:flex grid place-items-center  lg:justify-end justify-center ">
             <div
               style={{
-                backgroundImage: "url('./img/archieve.png')",
+                // backgroundImage: "url('./img/archieve.png')",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative h-[25vw] w-[25vw]">
-              <div className="absolute left-[3vw] top-[4vw] w-[13vw]">
-                <p className=" font-bold text-[1.5vw]">AFFILIATE MANAGEMENT</p>
+              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
+                  AFFILIATE MANAGEMENT
+                </p>
               </div>
-              <div className="absolute left-[3vw] top-[9vw] w-[12vw]">
-                <p className=" font-normal text-[1.5vw]">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-8 px-8 flex justify-center items-center">
+                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   Drive high-quality traffic and optimize conversions.
                 </p>
               </div>
             </div>
             <div
               style={{
-                backgroundImage: "url('./img/archieve.png')",
+                // backgroundImage: "url('./img/archieve.png')",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative h-[25vw] w-[25vw]">
-              <div className="absolute left-[3vw] top-[4vw] w-[13vw]">
-                <p className=" font-bold text-[1.5vw]">Retention Management</p>
+              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
+                  Retention Management
+                </p>
               </div>
-              <div className="absolute left-[3vw] top-[9vw] w-[12vw]">
-                <p className=" font-normal text-[1.5vw]">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
+                <p className=" font-normal lg:text-[1.5vw] text-[16px]">
                   Enhance player retention and loyalty with personalized CRM
                   strategies.
                 </p>
               </div>
             </div>
           </div>
-
-          <div className="flex justify-end">
+          <div className="lg:flex grid place-items-center  lg:justify-end justify-center ">
             <div
               style={{
-                backgroundImage: "url('./img/archieve.png')",
+                // backgroundImage: "url('./img/archieve.png')",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative h-[25vw] w-[25vw]">
-              <div className="absolute left-[3vw] top-[4vw] w-[13vw]">
-                <p className=" font-bold text-[1.5vw]">
+              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
                   Social Media Management
                 </p>
               </div>
-              <div className="absolute left-[3vw] top-[9vw] w-[12vw]">
-                <p className=" font-normal text-[1.5vw]">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
+                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   Boost visibility and engagement with targeted social
                   campaigns.
                 </p>
@@ -160,26 +228,28 @@ export default function Home() {
             </div>
             <div
               style={{
-                backgroundImage: "url('./img/archieve.png')",
+                // backgroundImage: "url('./img/archieve.png')",
                 backgroundSize: "contain",
-                backgroundPosition: "center",
+                backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative h-[25vw] w-[25vw]">
-              <div className="absolute left-[3vw] top-[4vw] w-[13vw]">
-                <p className=" font-bold text-[1.5vw]">Customer Service</p>
+              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
+                  Customer Service
+                </p>
               </div>
-              <div className="absolute left-[3vw] top-[9vw] w-[12vw]">
-                <p className=" font-normal text-[1.5vw]">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-8 px-8 flex justify-center items-center">
+                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   24/7 multilingual support for your players.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="flex w-full justify-center items-center mt-28 pb-8">
-            <Button className="bg-[#F25411] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
-              Learn More About Our Services
+          <div className="flex w-full justify-center items-center lg:mt-28 pb-8">
+            <Button className="bg-[#F25411] flex text-xl px-8 items-center rounded-[30px] lg:mt-10  normal-case">
+              {buttonText}
             </Button>
           </div>
         </div>
@@ -192,13 +262,26 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}></div>
         <div
-          className="px-[10%] xxl:px-[15%] py-16"
-          style={{
-            backgroundImage: "url('./img/bg/bg-3.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}>
+          className="relative px-[10%] xxl:px-[15%] py-16"
+          ref={questDiv}
+          style={
+            {
+              // backgroundImage: "url('./img/bg/bg-3.png')",
+              // backgroundSize: "contain",
+              // backgroundPosition: "center",
+              // backgroundRepeat: "no-repeat",
+              // transform: `translateY(${scrollY * 0.5}px)`,
+            }
+          }>
+          <div
+            className="w-full h-full absolute left-0"
+            style={{
+              zIndex: -1,
+              transform: `translateY(${scrollY * 0.3 - 700}px)`,
+              pointerEvents: "none",
+            }}>
+            <img src="./img/bg/bg-3.png" className=" w-full h-full"></img>
+          </div>
           <div className="mt-4">
             <img src="./img/logo-quest.png" className="w-[35vw]"></img>
           </div>
@@ -235,13 +318,24 @@ export default function Home() {
         </div>
 
         <div
-          className=" flex flex-col bg-[#6D09DD] items-end px-[10%] xxl:px-[15%] "
+          className=" flex flex-col bg-[#6D09DD] items-end px-[10%] xxl:px-[15%] relative"
           style={{
             backgroundImage: "url('./img/bg/bg-4 -1.png')",
             backgroundSize: "cover",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
+            zIndex: 1,
           }}>
+          <div
+            className="w-full h-full absolute left-0"
+            style={{
+              zIndex: 0,
+              transform: `translateY(${scrollY * 0.3 - 1000}px)`,
+              pointerEvents: "none",
+            }}>
+            <img src="./img/bg/bg-4-mask.png" className=" w-full h-full"></img>
+          </div>
+
           <div>
             <img src="./img/logo-affiliu.png" className="50vw mt-72"></img>
           </div>
@@ -269,24 +363,33 @@ export default function Home() {
         </div>
 
         <div
-          className="flex flex-col  items-center px-[10%] xxl:px-[15%] py-16"
+          className="flex flex-col  items-center px-[10%] xxl:px-[15%] py-16 relative"
           style={{
             backgroundImage: "url('./img/bg/bg-5.png')",
             backgroundSize: "cover",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
           }}>
-          <span className="text-[2.5vw] font-bold flex">
+          <div
+            className=" absolute left-0"
+            style={{
+              zIndex: 0,
+              transform: `translateY(${scrollY * 0.3 - 1400}px)`,
+              pointerEvents: "none",
+            }}>
+            <img src="./img/bg/bg-5-mask.png" className=" w-[75%] h-full"></img>
+          </div>
+          <span className="text-[2.5vw] font-bold flex" style={{ zIndex: 1 }}>
             Unlock the full potential of
             <p className="font-bold  ml-[1vw] text-[#6DE0F6]  border-b border-[#6DE0F6] border-b-[6px] leadin-none">
               {" "}
               your iGaming brand
             </p>
           </span>
-          <div className="my-16">
+          <div className="my-16" style={{ zIndex: 1 }}>
             <img src="./img/unlock.png"></img>
           </div>
-          <div className="flex">
+          <div className="flex" style={{ zIndex: 1 }}>
             <div className="w-[23vw] px-12 rounded-[20px] border border-[4px] border-black py-12 bg-white">
               <span className="text-[2.5vw] font-bold flex text-[#5700FF] flex flex-col leading-tight">
                 CUSTOM SOLUTIONS
@@ -326,12 +429,13 @@ export default function Home() {
         </div>
 
         <div
-          className=" flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-60px]"
+          className="relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-60px]"
           style={{
             backgroundImage: "url('./img/bg/bg-6.png')",
             backgroundSize: "cover",
             // backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
+            zIndex: 10,
           }}>
           <div>
             {" "}
