@@ -22,14 +22,11 @@ export default function Home() {
   const questDiv = useRef(null);
   const router = useRouter();
   const [buttonText, setButtonText] = useState("Learn More About Our Services");
-  const [questtop, setQuesttop] = useState(0);
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
   const handleResize = () => {
-    setQuesttop(questDiv.current.getBoundingClientRect().top);
-    console.log(questDiv.current.getBoundingClientRect().top);
     if (window.innerWidth >= 1024) {
       // lg breakpoint
       setButtonText("Learn More About Our Services");
@@ -151,8 +148,8 @@ export default function Home() {
           }}>
           <div
             style={{ zIndex: 3 }}
-            className="flex flex-col relative  items-center text-center mx-auto text-white  lg:pt-44 pt-44 pb-12">
-            <p className="lg:text-5xl text-3xl font-bold ">
+            className="flex flex-col relative  items-center text-center mx-auto text-white  lg:pt-44 pt-44 pb-12 ">
+            <p className="lg:text-5xl text-3xl font-bold lg:mt-8">
               Managed Services to{" "}
               <span className="text-[#6DE0F6] ml-2"> Elevate Your Brand</span>
             </p>
@@ -257,12 +254,12 @@ export default function Home() {
           className="w-[100%] h-[279px]"
           style={{
             backgroundImage: "url('./img/bg/bg-2-footer.png')",
-            backgroundSize: "contain",
+            backgroundSize: "cover",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
           }}></div>
         <div
-          className="relative px-[10%] xxl:px-[15%] py-16"
+          className="relative px-[10%] xxl:px-[15%] lg:py-16 mt-[-190px] lg:mt-0"
           ref={questDiv}
           style={
             {
@@ -282,38 +279,40 @@ export default function Home() {
             }}>
             <img src="./img/bg/bg-3.png" className=" w-full h-full"></img>
           </div>
-          <div className="mt-4">
-            <img src="./img/logo-quest.png" className="w-[35vw]"></img>
+          <div className="mt-4 flex lg:block justify-center">
+            <img
+              src="./img/logo-quest.png"
+              className="lg:w-[35vw] w-[60vw]"></img>
           </div>
-          <div className="mt-8 flex">
+          <div className="mt-8 lg:flex">
             <div>
               {" "}
-              <div className="w-[25vw] px-8 rounded-[20px] border border-[4px] border-black py-16 bg-white">
-                <span className="text-[3vw] font-bold flex text-[#6DE0F6] flex flex-col leading-tight">
+              <div className="lg:w-[25vw] px-8 rounded-[20px] border border-[4px] border-black lg:py-16 py-8 bg-white">
+                <p className="lg:text-[3vw] text-[22px] font-bold  text-[#6DE0F6] text-center lg:flex lg:flex-col leading-tight">
                   Gamification 
-                  <p className="text-black font-bold leading-none">
+                  <span className="text-black font-bold leading-none">
                     {" "}
                     Meets Social Engagement
-                  </p>
-                </span>
+                  </span>
+                </p>
 
-                <p className="mt-8 text-[1.5vw]">
+                <p className="mt-8 lg:text-[1.5vw] text-[12px] text-center">
                   Revolutionise player engagement with our QuestTracker
                   platform, combining gamification with social media integration
                   for an immersive experience that drives player loyalty.
                 </p>
               </div>
-              <div>
-                {" "}
-                <Button className="bg-[#F25411] flex text-xl py-5 px-8 items-center rounded-[35px] mt-10 normal-case">
-                  Discover QuestTracker
-                </Button>
-              </div>
             </div>
 
-            <div className="px-8">
+            <div className="lg:px-8 mt-8 lg:mt-0">
               <img src="./img/jorney-track 1.png"></img>
             </div>
+          </div>
+          <div className="flex lg:justify-start justify-center">
+            {" "}
+            <Button className="bg-[#F25411] flex text-xl lg:py-5 px-8 items-center rounded-[35px] mt-10 normal-case ">
+              Discover QuestTracker
+            </Button>
           </div>
         </div>
 
@@ -337,16 +336,18 @@ export default function Home() {
           </div>
 
           <div>
-            <img src="./img/logo-affiliu.png" className="50vw mt-72"></img>
+            <img
+              src="./img/logo-affiliu.png"
+              className="50vw lg:mt-72 mt-48"></img>
           </div>
-          <div className="w-[30vw] text-white mt-12">
-            <span className="text-[3.5vw] font-bold flex text-[#6DE0F6] flex flex-col leading-tight">
+          <div className="lg:w-[30vw] text-white text-center mt-12">
+            <p className="lg:text-[3.5vw] text-[24px] font-bold lg:flex text-[#6DE0F6]  lg:flex-col leading-tight">
               High Quality 
-              <p className="text-white font-bold leading-none">
+              <span className="text-white font-bold leading-none">
                 {" "}
                 Traffic from Trusted Sources
-              </p>
-            </span>
+              </span>
+            </p>
 
             <p className="mt-8 text-[1.5vw]">
               Affilu connects iGaming brands with premium affiliate partners,
@@ -429,7 +430,7 @@ export default function Home() {
         </div>
 
         <div
-          className="relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-60px]"
+          className="relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
           style={{
             backgroundImage: "url('./img/bg/bg-6.png')",
             backgroundSize: "cover",
@@ -439,7 +440,7 @@ export default function Home() {
           }}>
           <div>
             {" "}
-            <div className="w-[37vw] px-8 rounded-[20px]   py-12">
+            <div className="w-[37vw] px-8 rounded-[20px]  mt-12 py-12">
               <span className="text-[3vw] font-bold flex-col text-white  leading-tight">
                 Expert Consultancy Tailored for
                 <span className=" font-bold leading-none text-[#6DE0F6]">

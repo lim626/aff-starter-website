@@ -252,7 +252,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center"
         style={{
           backgroundImage: "url('./img/bg/bg-affilue-4.png')",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}>
@@ -285,7 +285,9 @@ export default function Home() {
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}>
-        <p className="font-bold text-5xl">Social Media Managed Services</p>
+        <p className="font-bold text-5xl lg:mt-12">
+          Social Media Managed Services
+        </p>
         <p className="w-[50vw] text-center mt-8 text-2xl">
           Take your brand to the next level with Aff-Starter’s Social Media
           Managed Services. Combined with our QuestTracker gamification
@@ -298,7 +300,7 @@ export default function Home() {
             <img src="./img/arrow.png"></img>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex lg:mb-24">
           <div
             style={{ zIndex: 10 }}
             className="flex flex-col items-center border-black border-[10px] rounded-[3vw] w-[25vw] px-8 py-6 bg-[#6D12D8] text-white ">
@@ -337,7 +339,7 @@ export default function Home() {
         className="w-full h-[200px]"
         style={{
           backgroundImage: "url('./img/bg/bg-affilue-6.png')",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}></div>
