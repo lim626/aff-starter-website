@@ -70,7 +70,7 @@ export default function Header() {
         <div className="flex hidden lg:flex">
           <nav class=" text-[1.3vw] flex items-center text-white">
             <a
-              href="#"
+              href="/"
               className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
               Home
             </a>
