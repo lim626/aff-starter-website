@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Button, Input } from "@material-tailwind/react";
+import { Button, Input, Carousel, IconButton } from "@material-tailwind/react";
 import { useEffect, useState, useRef } from "react";
 import { BackendBaseURL } from "./utils/constant";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { motion } from "framer-motion";
+
 import Link from "next/link";
 import {
   LuBarChart2,
@@ -22,6 +23,12 @@ export default function Home() {
   const questDiv = useRef(null);
   const router = useRouter();
   const [buttonText, setButtonText] = useState("Learn More About Our Services");
+  const [solutionText, setSolutionText] = useState(
+    "Explore Development Solutions"
+  );
+  const [exploreText, setExploreText] = useState(
+    "Explore Our Affiliate Network"
+  );
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -30,8 +37,12 @@ export default function Home() {
     if (window.innerWidth >= 1024) {
       // lg breakpoint
       setButtonText("Learn More About Our Services");
+      setExploreText("Explore Our Affiliate Network");
+      setSolutionText("Explore Development Solutions");
     } else {
       setButtonText("Learn More");
+      setExploreText("Explore Our Network");
+      setSolutionText("Learn More");
     }
   };
 
@@ -175,7 +186,7 @@ export default function Home() {
                   AFFILIATE MANAGEMENT
                 </p>
               </div>
-              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-8 px-8 flex justify-center items-center">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8  flex justify-center items-center">
                 <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   Drive high-quality traffic and optimize conversions.
                 </p>
@@ -245,16 +256,16 @@ export default function Home() {
           </div>
 
           <div className="flex w-full justify-center items-center lg:mt-28 pb-8">
-            <Button className="bg-[#F25411] flex text-xl px-8 items-center rounded-[30px] lg:mt-10  normal-case">
-              {buttonText}
+            <Button className="bg-[#F25411] flex text-xl px-8 items-center justify-center rounded-[30px] lg:mt-10  normal-case">
+              <p>{buttonText}</p>
             </Button>
           </div>
         </div>
         <div
-          className="w-[100%] h-[279px]"
+          className="w-[100%] h-[279px] md:bg-cover bg-contain"
           style={{
             backgroundImage: "url('./img/bg/bg-2-footer.png')",
-            backgroundSize: "cover",
+
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
           }}></div>
@@ -310,16 +321,16 @@ export default function Home() {
           </div>
           <div className="flex lg:justify-start justify-center">
             {" "}
-            <Button className="bg-[#F25411] flex text-xl lg:py-5 px-8 items-center rounded-[35px] mt-10 normal-case ">
+            <Button className="md:bg-[#F25411] bg-[#F14902] flex text-xl lg:py-5 px-8 items-center rounded-[35px] mt-10 normal-case ">
               Discover QuestTracker
             </Button>
           </div>
         </div>
 
         <div
-          className=" flex flex-col bg-[#6D09DD] items-end px-[10%] xxl:px-[15%] relative"
+          className="affilu flex flex-col bg-[#6D09DD] items-end px-[10%] xxl:px-[15%] relative"
           style={{
-            backgroundImage: "url('./img/bg/bg-4 -1.png')",
+            // backgroundImage: "url('./img/bg/bg-4 -1.png')",
             backgroundSize: "cover",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
@@ -349,15 +360,19 @@ export default function Home() {
               </span>
             </p>
 
-            <p className="mt-8 text-[1.5vw]">
+            <p className="mt-8 md:text-[20px]">
               Affilu connects iGaming brands with premium affiliate partners,
               delivering traffic that converts. Our quality-driven network
               ensures only the best affiliates promote your brand.
             </p>
-            <div className="mb-32">
+
+            <div className="md:hidden">
+              <img src="./img/bg/bg-4 -1-2.png" className="50vw "></img>
+            </div>
+            <div className="md:mb-32 mb-12 flex items-center justify-center">
               {" "}
-              <Button className="bg-[#F25411] flex text-xl py-5 px-8 items-center rounded-[35px] mt-10 normal-case">
-                Explore Our Affiliate Network
+              <Button className="bg-[#F25411] flex text-xl md:py-5 py-2  md:px-8 px-4 items-center rounded-[35px] mt-0 md:mt-10 normal-case">
+                {exploreText}
               </Button>
             </div>
           </div>
@@ -380,9 +395,11 @@ export default function Home() {
             }}>
             <img src="./img/bg/bg-5-mask.png" className=" w-[75%] h-full"></img>
           </div>
-          <span className="text-[2.5vw] font-bold flex" style={{ zIndex: 1 }}>
+          <span
+            className="md:text-[2.5vw] text-[20px] font-bold md:flex"
+            style={{ zIndex: 1 }}>
             Unlock the full potential of
-            <p className="font-bold  ml-[1vw] text-[#6DE0F6]  border-b border-[#6DE0F6] border-b-[6px] leadin-none">
+            <p className="font-bold  ml-[1vw] text-[#6DE0F6]  md:border-b border-[#6DE0F6] md:border-b-[6px] leadin-none text-center md:text-left">
               {" "}
               your iGaming brand
             </p>
@@ -390,49 +407,48 @@ export default function Home() {
           <div className="my-16" style={{ zIndex: 1 }}>
             <img src="./img/unlock.png"></img>
           </div>
-          <div className="flex" style={{ zIndex: 1 }}>
-            <div className="w-[23vw] px-12 rounded-[20px] border border-[4px] border-black py-12 bg-white">
-              <span className="text-[2.5vw] font-bold flex text-[#5700FF] flex flex-col leading-tight">
+          <div className="md:flex " style={{ zIndex: 1 }}>
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 bg-white mb-8 md:mb-0">
+              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
                 CUSTOM SOLUTIONS
               </span>
-              <p className="mt-8 text-[1.5vw]">
+              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
                 Our expert team delivers scalable web and mobile solutions
                 designed for the unique demands of the iGaming industry.
               </p>
             </div>
-            <div className="w-[23vw] px-12 rounded-[20px] border border-[4px] border-black py-12 ml-4 bg-white">
-              <span className="text-[2.5vw] font-bold flex text-black flex flex-col leading-tight">
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white mb-8 md:mb-0">
+              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-black flex flex-col leading-tight">
                 Technologies
               </span>
-              <p className="mt-8 text-[1.5vw]">
+              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
                 From cutting-edge front-end development to secure, cloud-based
                 infrastructure, we cover everything you need to bring your
                 vision to life.
               </p>
             </div>
-            <div className="flex ">
-              <div className="w-[23vw] px-12 rounded-[20px] border border-[4px] border-black py-12 ml-4 bg-white">
-                <span className="text-[2.5vw] font-bold flex text-[#5700FF] flex flex-col leading-tight">
-                  Blockchain & AI
-                </span>
-                <p className="mt-8 text-[1.5vw]">
-                  Leverage advanced technologies such as blockchain for secure
-                  transactions and AI for data-driven player engagement.
-                </p>
-              </div>
+
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white  md:mb-0">
+              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
+                Blockchain & AI
+              </span>
+              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
+                Leverage advanced technologies such as blockchain for secure
+                transactions and AI for data-driven player engagement.
+              </p>
             </div>
           </div>
           <div>
-            <Button className="bg-[#0FC3C3] flex text-[22px] py-5 px-12 items-center rounded-[35px] mt-10 normal-case">
-              Explore Development Solutions
+            <Button className="bg-[#0FC3C3] flex md:text-[22px] text-[18px] md:py-5 py-1 md:px-12 px-4 items-center rounded-[35px] mt-10 normal-case">
+              {solutionText}
             </Button>
           </div>
         </div>
 
         <div
-          className="relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
+          className="consultancy relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
           style={{
-            backgroundImage: "url('./img/bg/bg-6.png')",
+            // backgroundImage: "url('./img/bg/bg-6.png')",
             backgroundSize: "cover",
             // backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
@@ -440,8 +456,8 @@ export default function Home() {
           }}>
           <div>
             {" "}
-            <div className="w-[37vw] px-8 rounded-[20px]  mt-12 py-12">
-              <span className="text-[3vw] font-bold flex-col text-white  leading-tight">
+            <div className="md:w-[37vw] px-8 rounded-[20px]  md:mt-12 mt-4 md:py-12 py-4 flex flex-col text-center md:text-left items-center md:items-left">
+              <span className="md:text-[3vw] text-[20px]  md:text-left font-bold flex-col text-white  leading-tight">
                 Expert Consultancy Tailored for
                 <span className=" font-bold leading-none text-[#6DE0F6]">
                   {" "}
@@ -449,55 +465,160 @@ export default function Home() {
                 </span>
               </span>
 
-              <p className="mt-8 text-[1.5vw] text-white">
-                Revolutionise player engagement with our QuestTracker platform,
-                combining gamification with social media integration for an
-                immersive experience that drives player loyalty.
+              <p className="mt-8 md:text-[1.5vw] text-[13px] text-white">
+                Leverage our industry expertise with tailored consultancy
+                services, ranging from payment solutions to legal setup, helping
+                you navigate complex regulatory landscapes.
               </p>
+
+              <div className="md:hidden mt-4">
+                <img src="./img/bg/bg-6-2.png" className=""></img>
+              </div>
             </div>
-            <div className="px-8">
+            <div className="px-8 flex justify-center">
               {" "}
-              <Button className="bg-[#F25411] flex text-xl py-3 px-8 items-center rounded-[35px] mt-10 normal-case">
+              <Button className="bg-[#F25411] flex text-xl py-3 md:px-8 px-4 text-[15px] md:text-[22px] items-center rounded-[35px] md:mt-10 normal-case">
                 Discover QuestTracker
               </Button>
             </div>
           </div>
         </div>
         <div
-          className="w-full h-[130px]"
+          className="w-full md:h-[130px] h-[50px]"
           style={{
             backgroundImage: "url('./img/bg/bg-6-footer.png')",
             backgroundSize: "cover",
             backgroundPosition: "left",
             backgroundRepeat: "no-repeat",
           }}></div>
-        <div className=" grid grid-cols-2   py-16">
-          <div className="flex flex-col pl-[15vw]">
-            <span className="text-[2.3vw] font-bold flex">
+        <div
+          className=" grid md:grid-cols-2   py-16"
+          style={{
+            backgroundImage: "url('./img/bg-say.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
+          <div className="flex flex-col md:pl-[15vw] items-center md:items-start  md:px-0 ">
+            <span className="md:text-[2.3vw] text-[23px] font-bold flex">
               WHAT OUR
-              <p className="font-bold  ml-[1vw] text-[#6DE0F6]  border-b border-[#6DE0F6] border-b-[6px] leadin-none">
+              <p className="font-bold  ml-2 md:text-[#6DE0F6]  md:border-b md:border-[#6DE0F6] md:border-b-[6px] leadin-none">
                 {" "}
                 CLIENTS SAY
               </p>
             </span>
-            <p className="text-[1.5vw] mt-8">
+            <p className="md:text-[1.5vw] mt-8 text-center md:text-left px-8 md:px-0">
               Don’t take our word for it—see how we’ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
-            <div>
+            <div className="hidden md:block">
               <img src="./img/say.png"></img>
             </div>
+            <div className="w-[90vw] px-4 py-4 mt-8 block md:hidden">
+              <Carousel
+                className="rounded-xl "
+                prevArrow={({ handlePrev }) => (
+                  <IconButton
+                    variant="text"
+                    color="white"
+                    size="md"
+                    onClick={handlePrev}
+                    className="!absolute top-2/4 left-4 -translate-y-2/4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-6 w-6">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                      />
+                    </svg>
+                  </IconButton>
+                )}
+                nextArrow={({ handleNext }) => (
+                  <IconButton
+                    variant="text"
+                    color="white"
+                    size="md"
+                    onClick={handleNext}
+                    className="!absolute top-2/4 !right-4 -translate-y-2/4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-6 w-6">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </IconButton>
+                )}
+                navigation={({ setActiveIndex, activeIndex, length }) => (
+                  <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 ">
+                    {new Array(length).fill("").map((_, i) => (
+                      <span
+                        key={i}
+                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                          activeIndex === i
+                            ? "w-4 bg-white "
+                            : "w-4 bg-white bg-opacity-20"
+                        }`}
+                        onClick={() => setActiveIndex(i)}
+                      />
+                    ))}
+                  </div>
+                )}>
+                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
+                  <img src="./img/avarta.png" width={60}></img>
+
+                  <div className="ml-8">
+                    <p className="font-bold text-white">John Doe</p>
+                    <p className="text-white text-[12px]">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In elit nibh, fringilla non metus sit amet, fermentum
+                      tincidunt enim”
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
+                  <img src="./img/avarta.png" width={60}></img>
+
+                  <div className="ml-8">
+                    <p className="font-bold text-white">John Doe</p>
+                    <p className="text-white text-[12px]">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In elit nibh, fringilla non metus sit amet, fermentum
+                      tincidunt enim”
+                    </p>
+                  </div>
+                </div>
+                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
+                  <img src="./img/avarta.png" width={60}></img>
+
+                  <div className="ml-8">
+                    <p className="font-bold text-white">John Doe</p>
+                    <p className="text-white text-[12px]">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In elit nibh, fringilla non metus sit amet, fermentum
+                      tincidunt enim”
+                    </p>
+                  </div>
+                </div>
+              </Carousel>
+            </div>
           </div>
-          <div
-            className="pl-16 w-full h-full"
-            style={{
-              backgroundImage: "url('./img/bg-say.png')",
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}>
-            <div className="bg-white w-[30vw]">
-              <div className="flex bg-white items-center px-8 py-8 w-[30vw]">
+          <div className="pl-16 w-full h-full hidden md:block">
+            <div className="bg-gray-100 md:w-[30vw] ">
+              <div className="flex bg-gray-100 items-center px-8 py-8 w-[30vw]">
                 <img src="./img/avarta.png"></img>
 
                 <div className="ml-8">
@@ -522,7 +643,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="flex bg-white items-center px-8 py-8 w-[30vw]">
+              <div className="flex bg-gray-100 items-center px-8 py-8 w-[30vw]">
                 <img src="./img/avarta.png"></img>
 
                 <div className="ml-8">

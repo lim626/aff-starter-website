@@ -7,8 +7,8 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col w-full  px-[10%] pt-32 center pb-16 bg-[#0C0834]">
-      <div className="grid grid-cols-3 gap-12">
+    <div className="flex flex-col w-full  px-[10%] md:pt-32 pt-12 center pb-16 bg-[#0C0834]">
+      <div className="md:grid grid-cols-3 gap-12 hidden">
         <div className="flex flex-col">
           <img
             src="./img/logo.png"
@@ -49,10 +49,32 @@ export default function Footer() {
           <p className="mt-2 text-[#6DE0F6]">info@aff-starter.com</p>
         </div>
       </div>
-      <span className="text-[22px]  text-gray-300 font-bold flex mt-16">
+      <span className="text-[22px]  text-gray-300 font-bold md:flex mt-16 hidden ">
         @2024 Aff-Starter by
         <p className="text-[#6DE0F6] mx-2">Nathan</p> | All Rights Reserved
       </span>
+
+      <div className="md:hidden flex flex-col items-center">
+        <img
+          src="./img/logo.png"
+          width="180"
+          height="85"
+          alt="Logo"
+          className="object-contain"></img>
+        <p className="font-bold text-[27px] text-white mt-8">Location</p>
+        <p className=" text-[18px] text-white mt-4">Address line</p>
+        <p className=" text-[18px] text-white ">Address line</p>
+        <p className=" text-[18px] text-white ">Address line</p>
+        <p className="font-bold text-[27px] text-white mt-4">Contact Us</p>
+        <p className=" text-[18px] text-[#59DEEB] mt-4">
+          Elevate Your Journey with Aff-Starter!
+        </p>
+        <span className=" text-[18px] text-white mt-4 text-center px-4 ">
+          Schedule a <span className="text-[#59DEEB]  ">FREE</span> Consultation
+          and Discovery Session Today!
+        </span>
+        <p className=" text-[18px] text-white mt-4">Info@aff-starter.com</p>
+      </div>
     </div>
   );
 }

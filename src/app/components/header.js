@@ -147,13 +147,13 @@ export default function Header() {
           </MenuHandler>
           <MenuList>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Home
+              <a href="/">Home</a>
             </MenuItem>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               Managed Services
             </MenuItem>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Affilu by Starter
+              <a href="/affilu">Affilu by Starter</a>
             </MenuItem>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               QuestTracker
