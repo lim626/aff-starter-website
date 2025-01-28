@@ -22,15 +22,21 @@ export default function Footer() {
               support?
             </p>
           </span>
+
           <p className="text-white mt-4">Let us know if you have a question.</p>
           <div className="mt-8">
-            <Button className="bg-[#D0098D] py-2 rounded-[30px] text-[20px] normal-case  font-normal flex justify-center items-center">
+              <Button className="bg-[#D0098D] py-2 rounded-[30px] text-[20px] normal-case  font-normal flex justify-center items-center">
               Contact us
             </Button>
           </div>
         </div>
 
         <div className="text-white">
+
+
+
+
+          
           <p className="font-semibold text-2xl">LOCATION</p>
           <p className="mt-8">Aff-Starter</p>
           <p className="mt-2">Address Line1</p>

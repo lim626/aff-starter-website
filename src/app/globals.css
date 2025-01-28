@@ -193,6 +193,10 @@ input {
   background-image: url('../../public/img/mobile/bg-2-1.png'); /* Default background image */
 }
 
+.pricing-service {
+  background-image: url('../../public/img/pricing/m-services.png'); /* Default background image */
+}
+
 .affilu {
   background-image: url('../../public/img/bg/bg-4 -1-1.png'); /* Default background image */
 }
@@ -217,6 +221,9 @@ input {
     background-image: url('../../public/img/bg/bg-2-1.png'); /* Default background image */
   }
   
+  .pricing-service {
+    background-image: url('../../public/img/pricing/services.png'); /* Default background image */
+  }
   
 .consultancy {
   background-image: url('../../public/img/bg/bg-6.png'); /* Default background image */

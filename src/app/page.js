@@ -46,6 +46,10 @@ export default function Home() {
     }
   };
 
+  
+
+
+  
   useEffect(() => {
     // Set initial button text
     handleResize();
@@ -84,6 +88,8 @@ export default function Home() {
               class=" text-black font-bold">
               Empowering
             </motion.p>
+
+
             <motion.p
               initial={{ opacity: 0, z: 20 }}
               animate={{ opacity: 1, z: 0 }}
@@ -158,6 +164,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}>
           <div
+            id="managed-services"
             style={{ zIndex: 3 }}
             className="flex flex-col relative  items-center text-center mx-auto text-white  lg:pt-44 pt-44 pb-12 ">
             <p className="lg:text-5xl text-3xl font-bold lg:mt-8">
@@ -271,6 +278,7 @@ export default function Home() {
           }}></div>
         <div
           className="relative px-[10%] xxl:px-[15%] lg:py-16 mt-[-190px] lg:mt-0"
+          id="quest-tracker"
           ref={questDiv}
           style={
             {

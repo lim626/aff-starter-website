@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import {
@@ -17,6 +17,7 @@ import {
 import { Bars3Icon } from "@heroicons/react/24/outline";
 export default function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const navbarHeight = 120; // Set your navbar height here
@@ -71,32 +72,36 @@ export default function Header() {
           <nav class=" text-[1.3vw] flex items-center text-white">
             <a
               href="/"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Home
             </a>
-            <a
-              href="#"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
-              Managed Services
-            </a>
+            {pathname === "/" && (
+              <a
+                href="#managed-services"
+                className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+                Managed Services
+              </a>
+            )}
             <a
               href="/affilu"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Affilu by Aff-Starter
             </a>
+            {pathname === "/" && (
+              <a
+                href="#quest-tracker"
+                className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+                QuestTracker
+              </a>
+            )}
             <a
-              href="#"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
-              QuestTracker
-            </a>
-            <a
-              href="#"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
+              href="/pricing"
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Pricing
             </a>
             <a
               href="#"
-              className="hover:bg-white hover:text-[#0C0834] px-3 py-4 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Contact Us
             </a>
           </nav>
@@ -149,21 +154,21 @@ export default function Header() {
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="/">Home</a>
             </MenuItem>
-            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Managed Services
-            </MenuItem>
+            {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              <a href="#managed-services">Managed Services</a>
+            </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="/affilu">Affilu by Starter</a>
             </MenuItem>
+            {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              <a href="#quest-tracker">QuestTracker</a>
+            </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              QuestTracker
+              <a href="/pricing">Pricing</a>
             </MenuItem>
-            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Pricing
-            </MenuItem>
-            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+            {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               Schedule a call
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               Contact US
             </MenuItem>
