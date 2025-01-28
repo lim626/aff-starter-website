@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button, Input, Carousel, IconButton } from "@material-tailwind/react";
 import { useEffect, useState, useRef } from "react";
