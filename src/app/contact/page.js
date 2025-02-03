@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
-import { Button, Input } from "@material-tailwind/react";
+import { useRouter } from "next/navigation";
+import { Button, Input, Typography } from "@material-tailwind/react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-
+import { Carousel, IconButton } from "@material-tailwind/react";
 import Footer from "../components/footer";
 
 export default function Contact() {
@@ -11,19 +13,21 @@ export default function Contact() {
       <div className="relative h-[600px] sm:h-[700px] md:h-[800px] w-full">
         <Image
           src="/img/contact/m-bg.png"
-          alt="iGaming Business Background Mobile"
+          alt="Mobile background showing iGaming business interface"
           width={1920}
           height={1080}
           className="w-full h-full brightness-110 md:hidden"
           priority
+          sizes="100vw"
         />
         <Image
           src="/img/contact/bg.png"
-          alt="iGaming Business Background Desktop"
+          alt="Desktop background showing iGaming business interface"
           width={1920}
           height={1080}
           className="w-full h-full brightness-110 hidden md:block"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 ">
           <div className="container mx-auto px-4 h-full flex flex-col md:justify-center mt-16 md:mt-0">
@@ -35,7 +39,7 @@ export default function Contact() {
               className="max-w-2xl text-left md:text-left text-center mx-auto md:mx-0"
             >
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Let's Take Your iGaming Business to the Next Level
+                Let&apos;s Take Your iGaming Business to the Next Level
               </h1>
               <p className="text-[22px] md:text-2xl text-white mb-8 mt-16 md:my-16">
                 Get in touch with our expert team to discuss how we can help you achieve your goals.
@@ -60,8 +64,8 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl md:text-4xl  font-bold max-w-4xl mx-auto">
-              At Aff-Starter, we're passionate about supporting iGaming brands like yours. Whether you need affiliate management, CRM solutions, or social media expertise, our team is here to help.
+            <h2 className="text-2xl md:text-4xl font-bold max-w-4xl mx-auto">
+              At Aff-Starter, we&apos;re passionate about supporting iGaming brands like yours. Whether you need affiliate management, CRM solutions, or social media expertise, our team is here to help.
             </h2>
           </motion.div>
 

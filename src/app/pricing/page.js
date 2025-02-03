@@ -1,4 +1,9 @@
 "use client";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { Button, Input, Typography } from "@material-tailwind/react";
+import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Footer from "../components/footer";
 
@@ -19,14 +24,22 @@ export default function Home() {
           <p className="text-white md:text-3xl text-xl md:w-[50%] mt-10 md:pr-10 px-4">
             At Aff-Starter, we offer comprehensive affiliate, CRM, and social
             media management solutions designed to deliver results. Whether
-            you're a start-up or an established casino, our transparent pricing
+            you&apos;re a start-up or an established casino, our transparent pricing
             structure ensures you only pay for what you need.
           </p>
         </div>
       </div>
 
       <div className="md:hidden flex flex-col items-center bg-cover justify-center  w-full bg-top bg-no-repeat relative">
-        <img src="/img/pricing/m-plan.png" className="w-full " />
+        <Image
+          src="/img/pricing/m-plan.png"
+          alt="Mobile pricing plan background"
+          width={1920}
+          height={1080}
+          className="w-full"
+          priority
+          sizes="100vw"
+        />
           <div className="mt-16 text-center absolute top-0 left-0 z-10">
             <p className="text-white  text-2xl font-bold px-4">
               Flexible plans tailored to meet the needs of your iGaming brand.
@@ -34,7 +47,7 @@ export default function Home() {
             <p className="text-white md:text-3xl text-[16px] md:w-[50%] mt-10 md:pr-10 px-8">
               At Aff-Starter, we offer comprehensive affiliate, CRM, and social
               media management solutions designed to deliver results. Whether
-              you're a start-up or an established casino, our transparent pricing
+              you&apos;re a start-up or an established casino, our transparent pricing
               structure ensures you only pay for what you need.
             </p>
           </div>
@@ -67,16 +80,20 @@ export default function Home() {
             }}>
             <p className="text-black text-3xl font-bold">Pay-as-You-Go</p>
             <p className="text-black text-center text-[14px] mt-4">
-              No long-term commitment—ideal for flexibility.
+              No long-term commitment&mdash;ideal for flexibility.
             </p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="my-2"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-black text-center text-[14px] mt-4 px-2 underline">
               Full affiliate management Deal negotiation Retention optimisation
@@ -95,13 +112,17 @@ export default function Home() {
             }}>
             <p className="text-white text-3xl font-bold">Aff-Starter Plan</p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="mb-2 mt-6"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               Core affiliate management and deal negotiation services.
@@ -120,13 +141,17 @@ export default function Home() {
             }}>
             <p className="text-black text-3xl font-bold">Aff-Driver Plan</p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="my-2 mt-4"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-black text-center text-[14px] mt-4 px-2 underline">
               All Aff-Starter services plus social media management and basic
@@ -150,13 +175,17 @@ export default function Home() {
               Plan
             </span>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="mb-2 mt-6"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               All Aff-Driver services with enhanced optimisation and deal
@@ -238,16 +267,20 @@ export default function Home() {
             }}>
             <p className="text-black text-3xl font-bold">Pay-as-You-Go</p>
             <p className="text-black text-center text-[14px] mt-4">
-              No long-term commitment—ideal for flexibility.
+              No long-term commitment&mdash;ideal for flexibility.
             </p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="my-2"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-black text-center text-[14px] mt-4 px-2 underline">
               Full affiliate management Deal negotiation Retention optimisation
@@ -266,13 +299,17 @@ export default function Home() {
             }}>
             <p className="text-white text-3xl font-bold">Aff-Starter Plan</p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="mb-2 mt-6"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               Core affiliate management and deal negotiation services.
@@ -291,13 +328,17 @@ export default function Home() {
             }}>
             <p className="text-black text-3xl font-bold">Aff-Driver Plan</p>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="my-2 mt-4"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-black text-center text-[14px] mt-4 px-2 underline">
               All Aff-Starter services plus social media management and basic
@@ -321,13 +362,17 @@ export default function Home() {
               Plan
             </span>
 
-            <img
-              src="./img/curve.png"
+            <Image
+              src="/img/curve.png"
+              alt="Decorative curve"
+              width={800}
+              height={100}
               className="mb-2 mt-6"
-              width="80%"
               style={{
                 zIndex: 1,
-              }}></img>
+              }}
+              sizes="80vw"
+            ></Image>
 
             <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               All Aff-Driver services with enhanced optimisation and deal
@@ -372,13 +417,17 @@ export default function Home() {
                 Enhance player engagement and retention with our scalable CRM solutions:
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="my-2"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-[14px] mt-4 px-2 underline">
                  Dedicated CRM manager Advanced optimisation tools Comprehensive retention
@@ -397,16 +446,20 @@ export default function Home() {
               }}>
               <p className="text-white text-3xl font-bold">Social Media Management</p>
               <p className="text-white text-center text-[14px] mt-4">
-                Build your brand's presence &  connect with your audience through strategic social media campaigns:
+                Build your brand&apos;s presence &amp; connect with your audience through strategic social media campaigns:
               </p>
               
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="mb-2 mt-6"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               Dedicated social media manager Content creation and campaign management Performance tracking and detailed reporting
@@ -428,13 +481,17 @@ export default function Home() {
                Boost player satisfaction with our multilingual, 24/7 support solutions:
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="my-2"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-[14px] mt-4 px-2 underline">
                  VIP management Comprehensive player support
@@ -463,13 +520,17 @@ export default function Home() {
                 Get expert advice on casino operations, payments, and legal aspects of your iGaming
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="mb-2 mt-6"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-3xl mt-4 font-bold ">
                 POC
@@ -556,13 +617,17 @@ export default function Home() {
                 Enhance player engagement and retention with our scalable CRM solutions:
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="my-2"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-[14px] mt-4 px-2 underline">
                  Dedicated CRM manager Advanced optimisation tools Comprehensive retention
@@ -581,15 +646,19 @@ export default function Home() {
               }}>
               <p className="text-white text-3xl font-bold">Social Media Management</p>
               <p className="text-white text-center text-[14px] mt-4">
-                Build your brand's presence &  connect with your audience through strategic social media campaigns:
+                Build your brand&apos;s presence &amp; connect with your audience through strategic social media campaigns:
               </p>
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="mb-2 mt-6"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-white text-center text-[14px] mt-4 px-2 underline">
               Dedicated social media manager Content creation and campaign management Performance tracking and detailed reporting
@@ -611,13 +680,17 @@ export default function Home() {
                Boost player satisfaction with our multilingual, 24/7 support solutions:
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="my-2"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-[14px] mt-4 px-2 underline">
                  VIP management Comprehensive player support
@@ -646,13 +719,17 @@ export default function Home() {
                 Get expert advice on casino operations, payments, and legal aspects of your iGaming
               </p>
 
-              <img
-                src="./img/curve.png"
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={800}
+                height={100}
                 className="mb-2 mt-6"
-                width="80%"
                 style={{
                   zIndex: 1,
-                }}></img>
+                }}
+                sizes="80vw"
+              ></Image>
 
               <p className="text-black text-center text-3xl mt-4 font-bold ">
                 POC
@@ -671,14 +748,28 @@ export default function Home() {
 
       <div className="flex flex-col justify-center items-center md:text-left  text-center w-full px-[5%]">
       <div className="w-[50%] md:hidden block">
-            <img src="/img/pricing/av.png" className="" />
+            <Image
+              src="/img/pricing/av.png"
+              alt="Aff-Starter advantages illustration"
+              width={800}
+              height={600}
+              className=""
+              sizes="50vw"
+            />
           </div>
         <p className="md:text-6xl text-3xl  font-bold text-black md:mt-10">
           Why choose Aff-Starter?
         </p>
         <div className="flex  w-[80%] md:mt-10 justify-center md:pt-10">
           <div className="w-[50%] md:block hidden">
-            <img src="/img/pricing/av.png" className="" />
+            <Image
+              src="/img/pricing/av.png"
+              alt="Aff-Starter advantages illustration"
+              width={800}
+              height={600}
+              className=""
+              sizes="50vw"
+            />
           </div>
 
           <div className="flex flex-col md:px-12 w-full">
