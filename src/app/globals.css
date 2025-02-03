@@ -189,6 +189,10 @@ input {
 .card {
   background-image: url('../../public/img/bg/mast1.png'); /* Default background image */
 }
+
+.contact{
+  background-image: url('../../public/img/contact/m-contact.png'); /* Default background image */
+}
 .service {
   background-image: url('../../public/img/mobile/bg-2-1.png'); /* Default background image */
 }
@@ -214,6 +218,9 @@ input {
 
 
 @media (min-width: 768px) {
+  .contact{
+    background-image: url('../../public/img/contact/contact.png'); /* Default background image */
+  }
   .card {
       background-image: url('../../public/img/archieve.png'); /* Change image for medium screens */
   }

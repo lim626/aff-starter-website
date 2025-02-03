@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
@@ -99,7 +100,7 @@ export default function Header() {
               Pricing
             </a>
             <a
-              href="#"
+              href="/contact"
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Contact Us
             </a>
@@ -169,10 +170,11 @@ export default function Header() {
               Schedule a call
             </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Contact US
+              <a href="/contact">Contact US</a>
             </MenuItem>
           </MenuList>
         </Menu>
+
       </div>
     </Navbar>
   );
