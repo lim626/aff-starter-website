@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { Button, Input, Typography } from "@material-tailwind/react";
-import { useEffect, useState, useRef } from "react";
+import { Button, Input } from "@material-tailwind/react";
 import { motion } from "framer-motion";
-import { Carousel, IconButton } from "@material-tailwind/react";
+
 import Footer from "../components/footer";
 
 export default function Contact() {
