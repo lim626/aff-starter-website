@@ -75,25 +75,25 @@ export default function Header() {
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Home
             </a>
-            {pathname === "/" && (
+            {/* {pathname === "/" && (
               <a
                 href="#managed-services"
                 className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
                 Managed Services
               </a>
-            )}
+            )} */}
             <a
               href="/affilu"
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
-              Affilu by Aff-Starter
+              Managed Services
             </a>
-            {pathname === "/" && (
+            {/* {pathname === "/" && (
               <a
                 href="#quest-tracker"
                 className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
                 QuestTracker
               </a>
-            )}
+            )} */}
             <a
               href="/pricing"
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
