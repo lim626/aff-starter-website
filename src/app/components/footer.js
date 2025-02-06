@@ -62,10 +62,10 @@ export default function Footer() {
           height="85"
           alt="Logo"
           className="object-contain"></img>
-        <p className="font-bold text-[27px] text-white mt-8">Location</p>
+        {/* <p className="font-bold text-[27px] text-white mt-8">Location</p>
         <p className=" text-[18px] text-white mt-4">Address line</p>
         <p className=" text-[18px] text-white ">Address line</p>
-        <p className=" text-[18px] text-white ">Address line</p>
+        <p className=" text-[18px] text-white ">Address line</p> */}
         <p className="font-bold text-[27px] text-white mt-4">Contact Us</p>
         <p className=" text-[18px] text-[#59DEEB] mt-4">
           Elevate Your Journey with Aff-Starter!
@@ -74,7 +74,8 @@ export default function Footer() {
           Schedule a <span className="text-[#59DEEB]  ">FREE</span> Consultation
           and Discovery Session Today!
         </span>
-        <p className=" text-[18px] text-white mt-4">Info@aff-starter.com</p>
+        <p className=" text-[18px] text-white mt-4">+35679081137</p>
+        <p className=" text-[18px] text-white mt-4">lloyd@aff-starter.com</p>
       </div>
     </div>
   );
