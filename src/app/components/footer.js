@@ -31,19 +31,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="text-white">
-
-
-
-
-          
+        {/* <div className="text-white">
           <p className="font-semibold text-2xl">LOCATION</p>
           <p className="mt-8">Aff-Starter</p>
           <p className="mt-2">Address Line1</p>
           <p className="mt-2">Address Line2</p>
           <p className="mt-2">Address Line3</p>
           <p className="mt-2">Monday - Saturday:8AM - 4PM</p>
-        </div>
+        </div> */}
 
         <div className="text-white">
           <p className="font-semibold text-2xl">CONTACT WITH US</p>
@@ -51,13 +46,13 @@ export default function Footer() {
             Eleate Your Journey with Aff-Starter! Schedule a FREE Consultation
             and Discovery Session Today!
           </p>
-          <p className="mt-2 text-[#6DE0F6]">+12(0)3 4567 8901</p>
-          <p className="mt-2 text-[#6DE0F6]">info@aff-starter.com</p>
+          <p className="mt-2 text-[#6DE0F6]">Phone: +35679081137</p>
+          <p className="mt-2 text-[#6DE0F6]">Email: lloyd@aff-starter.com</p>
         </div>
       </div>
       <span className="text-[22px]  text-gray-300 font-bold md:flex mt-16 hidden ">
         @2024 Aff-Starter by
-        <p className="text-[#6DE0F6] mx-2">Nathan</p> | All Rights Reserved
+        <p className="text-[#6DE0F6] mx-2">Lim, Sam, Nathan</p>
       </span>
 
       <div className="md:hidden flex flex-col items-center">

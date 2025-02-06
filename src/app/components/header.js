@@ -158,7 +158,7 @@ export default function Header() {
               <a href="#managed-services">Managed Services</a>
             </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              <a href="/affilu">Affilu by Starter</a>
+              <a href="/affilu">Managed Services</a>
             </MenuItem>
             {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="#quest-tracker">QuestTracker</a>
