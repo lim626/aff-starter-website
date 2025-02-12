@@ -6,8 +6,66 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Footer from "../components/footer";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    companyName: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Check if all required fields are filled
+    if (!formData.name || !formData.companyName || !formData.service || !formData.message) {
+      toast.error('Please fill in all required fields');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Thank you for your message. We will get back to you soon!');
+        setFormData({
+          name: '',
+          companyName: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error(data.error || 'Something went wrong');
+      }
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="flex w-full flex-col min-h-screen">
       <div className="relative h-[600px] sm:h-[700px] md:h-[800px] w-full">
@@ -142,11 +200,15 @@ export default function Contact() {
             >
               <h2 className="text-3xl font-bold text-center mb-8">Schedule a Consultation</h2>
               
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input 
                     type="text" 
+                    name="name"
                     label="Name" 
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                     className="!border-t-blue-gray-200 focus:!border-cyan-400 focus:!border-t-0 focus:!outline-none"
                     labelProps={{
                       className: "!text-blue-gray-400"
@@ -155,7 +217,11 @@ export default function Contact() {
                   
                   <Input 
                     type="email" 
+                    name="email"
                     label="Email" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required 
                     className="!border-t-blue-gray-200 focus:!border-cyan-400 focus:!border-t-0 focus:!outline-none"
                     labelProps={{
                       className: "!text-blue-gray-400"
@@ -166,14 +232,24 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input 
                     type="text" 
+                    name="companyName"
                     label="Company Name"
+                    value={formData.companyName}
+                    onChange={handleInputChange}
+                    required
                     className="!border-t-blue-gray-200 focus:!border-cyan-400 focus:!border-t-0 focus:!outline-none"
                     labelProps={{
                       className: "!text-blue-gray-400"
                     }}
                   />
                   
-                  <select className="w-full h-10 border-b border-blue-gray-200 bg-transparent px-3 py-2 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all focus:border-cyan-400 focus:outline-0">
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required 
+                    className="w-full h-10 border-b border-blue-gray-200 bg-transparent px-3 py-2 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all focus:border-cyan-400 focus:outline-0"
+                  >
                     <option value="" disabled selected>Service</option>
                     <option value="affiliate">Affiliate Management</option>
                     <option value="crm">CRM Solutions</option>
@@ -183,17 +259,23 @@ export default function Contact() {
                 </div>
 
                 <textarea 
+                  name="message"
                   placeholder="Message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                   rows="4"
                   className="w-full border-b border-blue-gray-200 bg-transparent px-3 py-2 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all focus:border-cyan-400 focus:outline-0 resize-none"
                 ></textarea>
 
-                <div className="flex justify-center">
+               <div className="flex justify-center">
                   <Button 
+                    type="submit"
                     className="rounded-full bg-cyan-400 px-8"
                     size="lg"
+                    disabled={isSubmitting}
                   >
-                    Send
+                    {isSubmitting ? 'Sending...' : 'Send'}
                   </Button>
                 </div>
               </form>
