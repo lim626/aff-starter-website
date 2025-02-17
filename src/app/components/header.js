@@ -108,7 +108,8 @@ export default function Header() {
           <div className="flex items-center py-8">
             {" "}
             <Button className="bg-[#D0098D] rounded-[30px] text-[20px] normal-case ml-4 font-normal flex ">
-              Schedule a Call
+              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46"> Schedule a Call</a>
+             
               <img src="./img/phone.png" width={20} className="ml-3 mt-1"></img>
             </Button>
           </div>
@@ -166,12 +167,14 @@ export default function Header() {
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="/pricing">Pricing</a>
             </MenuItem>
-            {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              Schedule a call
-            </MenuItem> */}
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+             <a href="https://calendar.app.google/9RhX95NA3kyXy2F46">Schedule a call</a> 
+            </MenuItem>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="/contact">Contact US</a>
             </MenuItem>
+
+            
           </MenuList>
         </Menu>
 
