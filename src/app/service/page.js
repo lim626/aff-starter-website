@@ -74,7 +74,7 @@ export default function Home() {
               <p class=" text-white font-bold ">Affiliate Managed Services</p>
 
               <p className="text-white xxl:text-3xl md:text-2xl text-[12px] md:mt-12 mt-4 text-center">
-                Build powerful partnerships that drive growth with Aff-Starter's
+                Build powerful partnerships that drive growth with Aff-Starter&apos;s
                 comprehensive Affiliate Management services. From targeted
                 recruitment to ongoing optimization, we manage every step of the
                 affiliate journey to ensure your brand thrives in diverse

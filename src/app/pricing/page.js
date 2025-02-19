@@ -403,7 +403,7 @@ export default function Home() {
               }}>
               <p className="text-white text-3xl font-bold">Social Media Management</p>
               <p className="text-white text-center text-[14px] mt-4">
-                Build your brand&apos;s presence &amp; connect with your audience through strategic social media campaigns:
+                Build your brand&apos;s presence & connect with your audience through strategic social media campaigns:
               </p>
               
               <Image
@@ -518,7 +518,7 @@ export default function Home() {
               },
               {
                 title: "Social Media Management",
-                description: "Build your brand's presence & connect with your audience through strategic social media campaigns:",
+                description: "Build your brand&apos;s presence & connect with your audience through strategic social media campaigns:",
                 details: "Dedicated social media manager Content creation and campaign management Performance tracking and detailed reporting",
                 price: "€2,500",
                 bgImage: "pricing2.png",
