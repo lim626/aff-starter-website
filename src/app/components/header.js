@@ -83,7 +83,7 @@ export default function Header() {
               </a>
             )} */}
             <a
-              href="/affilu"
+              href="/service"
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Managed Services
             </a>
@@ -108,7 +108,7 @@ export default function Header() {
           <div className="flex items-center py-8">
             {" "}
             <Button className="bg-[#D0098D] rounded-[30px] text-[20px] normal-case ml-4 font-normal flex ">
-              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46"> Schedule a Call</a>
+              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank"> Schedule a Call</a>
              
               <img src="./img/phone.png" width={20} className="ml-3 mt-1"></img>
             </Button>
@@ -159,7 +159,7 @@ export default function Header() {
               <a href="#managed-services">Managed Services</a>
             </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
-              <a href="/affilu">Managed Services</a>
+              <a href="/service">Managed Services</a>
             </MenuItem>
             {/* <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="#quest-tracker">QuestTracker</a>

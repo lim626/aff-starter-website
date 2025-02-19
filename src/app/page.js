@@ -18,6 +18,14 @@ import {
 } from "react-icons/lu";
 import Footer from "./components/footer";
 
+// Import Swiper components at the top of the file
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectCards } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const questDiv = useRef(null);
@@ -117,8 +125,8 @@ export default function Home() {
               Quality Affiliate Traffic—All in One Place.
             </p>
             <div className="flex lg:justify-start justify-center">
-              <Button className="bg-[#F25411] flex lg:text-xl text-[20px] items-center rounded-[30px] mt-10">
-                Get Started{" "}
+              <Button className="bg-[#F25411] flex lg:text-xl text-[22px] items-center rounded-[30px] mt-10">
+                <a href="https://calendar.app.google/9RhX95NA3kyXy2F46">Get Started</a>
                 <img
                   src="./img/icon_start.png"
                   className="ml-2 hidden lg:block"></img>
@@ -126,11 +134,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 flex hidden lg:flex">
-            <img src="./img/mark1.png" className="mr-4 h-[30px]"></img>
-            <img src="./img/mark2.png" className="mr-4 h-[30px]"></img>
-            <img src="./img/mark3.png" className="mr-4 h-[30px]"></img>
-            <img src="./img/mark4.png" className="mr-4 h-[30px]"></img>
+          <div className="mt-16 flex hidden lg:flex gap-4 lg:text-2xl text-[22px] items-center">
+            <img src="./img/mark5.jpg" className="w-[100px] h-[40px] object-contain"></img>
+            <span className="h-[40px] flex items-center">||</span>
+            <img src="./img/mark6.jpg" className="w-[100px] h-[40px] object-contain"></img>
+            <span className="h-[40px] flex items-center">||</span>
+            <img src="./img/mark7.jpg" className="w-[100px] h-[40px] object-contain"></img>
           </div>
         </div>
         <div
@@ -175,7 +184,7 @@ export default function Home() {
               Aff-Starter offers a full suite of managed services designed to
               drive player retention, boost traffic, and deliver top-tier
               customer support. From affiliate management to social media
-              strategies, we’ve got you covered.
+              strategies, we've got you covered.
             </p>
           </div>
 
@@ -263,8 +272,8 @@ export default function Home() {
           </div>
 
           <div className="flex w-full justify-center items-center lg:mt-28 pb-8">
-            <Button className="bg-[#F25411] flex text-xl px-8 items-center justify-center rounded-[30px] lg:mt-10  normal-case">
-              <p>{buttonText}</p>
+            <Button className="bg-[#F25411] flex text-xl px-8 items-center justify-center rounded-[30px] lg:mt-10  normal-case" >
+              <a href="/service">{buttonText}</a>
             </Button>
           </div>
         </div>
@@ -507,7 +516,7 @@ export default function Home() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div className="flex flex-col md:pl-[15vw] items-center md:items-start  md:px-0 ">
+          <div className="flex flex-col md:pl-[15vw]  items-center justify-center  md:px-0 ">
             <span className="md:text-[2.3vw] text-[23px] font-bold flex">
               WHAT OUR
               <p className="font-bold  ml-2 md:text-[#6DE0F6]  md:border-b md:border-[#6DE0F6] md:border-b-[6px] leadin-none">
@@ -516,126 +525,118 @@ export default function Home() {
               </p>
             </span>
             <p className="md:text-[1.5vw] mt-8 text-center md:text-left px-8 md:px-0">
-              Don’t take our word for it—see how we’ve helped brands like yours
+              Don't take our word for it—see how we've helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
             <div className="hidden md:block">
               <img src="./img/say.png"></img>
             </div>
-            <div className="w-[90vw] px-4 py-4 mt-8 block md:hidden">
-              <Carousel
-                className="rounded-xl "
-                prevArrow={({ handlePrev }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handlePrev}
-                    className="!absolute top-2/4 left-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                nextArrow={({ handleNext }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handleNext}
-                    className="!absolute top-2/4 !right-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                navigation={({ setActiveIndex, activeIndex, length }) => (
-                  <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 ">
-                    {new Array(length).fill("").map((_, i) => (
-                      <span
-                        key={i}
-                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                          activeIndex === i
-                            ? "w-4 bg-white "
-                            : "w-4 bg-white bg-opacity-20"
-                        }`}
-                        onClick={() => setActiveIndex(i)}
-                      />
-                    ))}
+            <div className="w-[85vw] px-4 py-4 mt-8 block md:hidden">
+              <Swiper
+                effect={'cards'}
+                grabCursor={true}
+                modules={[EffectCards]}
+                className="mySwiper"
+                centeredSlides={true}
+                initialSlide={1}
+                cardsEffect={{
+                  perSlideOffset: 8,
+                  perSlideRotate: 2,
+                  rotate: true,
+                  slideShadows: false
+                }}
+              >
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-4 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-4">
+                      <p className="font-bold text-gray-200 text-[12px]">LuckyWhale:</p>
+                      <p className="text-[10px] text-gray-200 my-4">
+                        "LuckyWhale's collaboration with Aff-Starter has transformed our operations, driving remarkable growth in customer acquisition through expert affiliate management. Their team not only enhanced our CRM strategies but also redesigned our bonus and promotion approaches, leading to a significant increase in engagement and revenue."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Steve : Founder and CEO</p>
+                    </div>
                   </div>
-                )}>
-                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
-                  <img src="./img/avarta.png" width={60}></img>
+                </SwiperSlide>
 
-                  <div className="ml-8">
-                    <p className="font-bold text-white">John Doe</p>
-                    <p className="text-white text-[12px]">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      In elit nibh, fringilla non metus sit amet, fermentum
-                      tincidunt enim”
-                    </p>
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-2 py-2 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-2">
+                      <p className="font-bold text-gray-200 text-[12px]">Betterwin:</p>
+                      <p className="text-[10px] text-gray-200 my-2">
+                        "Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Raj - Founder and CEO</p>
+                    </div>
                   </div>
-                </div>
+                </SwiperSlide>
 
-                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
-                  <img src="./img/avarta.png" width={60}></img>
-
-                  <div className="ml-8">
-                    <p className="font-bold text-white">John Doe</p>
-                    <p className="text-white text-[12px]">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      In elit nibh, fringilla non metus sit amet, fermentum
-                      tincidunt enim”
-                    </p>
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-4">
+                      <p className="font-bold text-gray-200 text-[12px]">Playfrank:</p>
+                      <p className="text-[10px] text-gray-200 my-4">
+                        "Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Michel - Founder and CEO</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex bg-[#7F07EF] items-center px-4 py-8 ">
-                  <img src="./img/avarta.png" width={60}></img>
+                </SwiperSlide>
 
-                  <div className="ml-8">
-                    <p className="font-bold text-white">John Doe</p>
-                    <p className="text-white text-[12px]">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      In elit nibh, fringilla non metus sit amet, fermentum
-                      tincidunt enim”
-                    </p>
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-4">
+                      <p className="font-bold text-gray-200 text-[12px]">Quickspinner:</p>
+                      <p className="text-[10px] text-gray-200 my-4">
+                        "With Nathan at the helm of our affiliate program, managed by Aff-Starter, we've seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Michel - Founder and CEO</p>
+                    </div>
                   </div>
-                </div>
-              </Carousel>
+                </SwiperSlide>
+
+                <SwiperSlide className="!w-[250px]" >
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-4">
+                      <p className="font-bold text-gray-200 text-[12px]">Wasino:</p>
+                      <p className="text-[10px] text-gray-200 my-4">
+                        "Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Andy - CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <div className="px-4 mt-4">
+                      <p className="font-bold text-gray-200 text-[12px]">Loothoot:</p>
+                      <p className="text-[10px] text-gray-200 my-4">
+                        "At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market."
+                      </p>
+                      <p className="font-bold text-[12px] text-gray-200">Francisco - CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
-          <div className="pl-16 w-full h-full hidden md:block">
-            <div className="bg-gray-100 md:w-[30vw] ">
-              <div className="flex bg-gray-100 items-center px-8 py-8 w-[30vw]">
+          <div className="pl-16 w-full h-full hidden md:flex justify-center items-center">
+            <div className=" md:w-[30vw] ">
+              {/* <div className="flex bg-gray-100 items-center px-8 py-8 w-[30vw]">
                 <img src="./img/avarta.png"></img>
 
                 <div className="ml-8">
-                  <p className="font-bold text-[2vw]">John Doe</p>
-                  <p className="text-[1.1vw]">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    elit nibh, fringilla non metus sit amet, fermentum tincidunt
-                    enim”
+                  <p className="font-bold text-[20px]">LuckyWhale:</p>
+                  <p className="text-[14px]">
+                    "LuckyWhale’s collaboration with Aff-Starter has transformed our operations, driving remarkable growth in customer acquisition through expert affiliate management. Their team not only enhanced our CRM strategies but also redesigned our bonus and promotion approaches, leading to a significant increase in engagement and revenue."
                   </p>
+                  <p className="font-bold text-[14px]">Steve : Founder and CEO</p>
                 </div>
               </div>
 
@@ -645,9 +646,9 @@ export default function Home() {
                 <div className="ml-8">
                   <p className="font-bold text-[2vw]">John Doe</p>
                   <p className="text-[1.1vw]">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     elit nibh, fringilla non metus sit amet, fermentum tincidunt
-                    enim”
+                    enim"
                   </p>
                 </div>
               </div>
@@ -657,12 +658,106 @@ export default function Home() {
                 <div className="ml-8">
                   <p className="font-bold text-[2vw]">John Doe</p>
                   <p className="text-[1.1vw]">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                     elit nibh, fringilla non metus sit amet, fermentum tincidunt
-                    enim”
+                    enim"
                   </p>
                 </div>
-              </div>
+              </div> */}
+
+              <Swiper
+                effect={'cards'}
+                grabCursor={true}
+                modules={[EffectCards]}
+                className="mySwiper"
+                centeredSlides={true}
+                initialSlide={1}
+                cardsEffect={{
+                  perSlideOffset: 8,
+                  perSlideRotate: 2,
+                  rotate: true,
+                  slideShadows: false
+                }}
+              >
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">LuckyWhale:</p>
+                      <p className=" text-[16px] text-gray-200 my-4">
+                      “LuckyWhale’s collaboration with Aff-Starter has transformed our operations, driving remarkable growth in customer acquisition through expert affiliate management. Their team not only enhanced our CRM strategies but also redesigned our bonus and promotion approaches, leading to a significant increase in engagement and revenue.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Steve : Founder and CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-4 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">Betterwin :</p>
+                      <p className=" text-[16px] text-gray-200 my-4">
+                      “Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Raj - Founder and CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">Playfrank:</p>
+                      <p className=" text-[18px] text-gray-200 my-4">
+                      “Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Michel - Founder and CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">Quickspinner:</p>
+                      <p className=" text-[18px] text-gray-200 my-4">
+                      “With Nathan at the helm of our affiliate program, managed by Aff-Starter, we’ve seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Michel - Founder and CEO</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">Wasino:</p>
+                      <p className=" text-[18px] text-gray-200 my-4">
+                      “Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Andy - CEO
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
+                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <div className="ml-8">
+                      <p className="font-bold text-gray-200 text-[26px]">Loothoot:</p>
+                      <p className=" text-[18px] text-gray-200 my-4">
+                      “At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market.”
+                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Francisco - CEO
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+
+              </Swiper>
             </div>
           </div>
         </div>

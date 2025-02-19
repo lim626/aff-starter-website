@@ -12,6 +12,28 @@ dialog {
 }
 
 
+
+@font-face {
+  font-family: 'Bobby Jones Soft';
+  src: url( '../../font/Bobby Jones Soft Regular.woff2') format('woff2'),
+       url('../../font/Bobby Jones Soft Regular.woff') format('woff'),
+       url('../../font/regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'Bobby Jones Soft', system-ui, sans-serif;
+}
+
+/* Add SVG text font styling */
+svg text {
+  font-family: 'Bobby Jones Soft', system-ui, sans-serif !important;
+}
+
+
+
 table {
   @apply min-w-full px-4 sm:px-6 py-4 border-collapse;
 }
@@ -215,7 +237,11 @@ input {
 .loyal {
   background-image: url('../../public/img/mobile/bg-affilue-4.png'); /* Default background image */
 }
-
+.cards-swiper {
+  width: 100% !important;  /* Same as width in inline style */
+  /* height: 80% !important; */
+  margin-top: 50px; /* Same as height in inline style */
+}
 
 @media (min-width: 768px) {
   .contact{
@@ -246,6 +272,14 @@ input {
   background-image: url('../../public/img/bg/bg-affilue-4.png'); /* Default background image */
 }
 
+
+.cards-swiper {
+  width: 60% !important;  /* Same as width in inline style */
+  /* height: 80% !important;  */
+  /* Same as height in inline style */
+}
+
+
 }
 
 @keyframes scaleEffect {
@@ -263,3 +297,72 @@ input {
 .hover\:animate-scale:hover {
   animation: scaleEffect 1s ease forwards;
 }
+
+/* .swiper {
+  width: 240px;
+  height: 320px;
+} */
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background-color: none;
+}
+
+
+
+
+.cards-swiper .swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+.swiper-3d .swiper-slide-shadow {
+  background: none !important;
+}
+/* .swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+} */
+
+/* .swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+} */

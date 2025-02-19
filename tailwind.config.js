@@ -19,6 +19,9 @@ module.exports = {
       xxl: "1560px",
     },
     extend: {
+      fontFamily: {
+        'bobby-jones-soft': ['Bobby Jones Soft', 'sans-serif'],
+      },
       colors: {
         "secondary-bg": "#16181c",
         gold: "#FFD033",

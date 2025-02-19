@@ -6,6 +6,10 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Carousel, IconButton } from "@material-tailwind/react";
 import Footer from "../components/footer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 export default function Home() {
   return (
@@ -198,192 +202,145 @@ export default function Home() {
           </div>
         </div>
 
-        <Carousel
-                className="rounded-xl mt-8 md:hidden"
-                prevArrow={({ handlePrev }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handlePrev}
-                    className="!absolute top-2/4 left-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                nextArrow={({ handleNext }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handleNext}
-                    className="!absolute top-2/4 !right-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                navigation={({ setActiveIndex, activeIndex, length }) => (
-                  <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 ">
-                    {new Array(length).fill("").map((_, i) => (
-                      <span
-                        key={i}
-                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                          activeIndex === i
-                            ? "w-4 bg-white "
-                            : "w-4 bg-white bg-opacity-20"
-                        }`}
-                        onClick={() => setActiveIndex(i)}
-                      />
-                    ))}
-                  </div>
-                )}>
-          <div
-            className="flex flex-col items-center py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-            style={{
-              backgroundImage: "url('/img/pricing/pricing1.png')",
-              backgroundSize: "100% 100%",
-            }}>
-            <p className="text-black text-3xl font-bold">Pay-as-You-Go</p>
-            <p className="text-black text-center text-[14px] mt-4">
-              No long-term commitment&mdash;ideal for flexibility.
-            </p>
-
-            <Image
-              src="/img/curve.png"
-              alt="Decorative curve"
-              width={800}
-              height={100}
-              className="my-2"
+        <Swiper
+          effect={'cards'}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="md:!hidden !mt-8 w-[60%]"
+        >
+          <SwiperSlide>
+            <div
+              className="flex flex-col items-center pt-[50px] px-[15px] bg-cover bg-center bg-no-repeat relative min-h-[320px]"
               style={{
-                zIndex: 1,
-              }}
-              sizes="80vw"
-            ></Image>
+                backgroundImage: "url('/img/pricing/pricing1.png')",
+                backgroundSize: "100% 100%",
+              }}>
+              <p className="text-black text-2xl font-bold">Pay-as-You-Go</p>
+              <p className="text-black text-center text-[12px] mt-2">
+                No long-term commitment&mdash;ideal for flexibility.
+              </p>
 
-            <p className="text-black text-center text-[14px] mt-4 px-2 underline">
-              Full affiliate management Deal negotiation Retention optimisation
-            </p>
-            <span className="text-black text-center font-bold text-[30px] mt-4">
-              €4,500
-              <span className="text-[14px]">p/m</span>
-            </span>
-          </div>
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={600}
+                height={100}
+                className="my-2"
+                style={{
+                  zIndex: 1,
+                }}
+                sizes="60vw"
+              />
 
-          <div
-            className="flex flex-col items-center py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-            style={{
-              backgroundImage: "url('/img/pricing/pricing2.png')",
-              backgroundSize: "100% 100%",
-            }}>
-            <p className="text-white text-3xl font-bold">Aff-Starter Plan</p>
+              <p className="text-black text-center text-[12px] mt-2 px-2 underline">
+                Full affiliate management Deal negotiation Retention optimisation
+              </p>
+              <span className="text-black text-center font-bold text-[24px] mt-2">
+                €4,500
+                <span className="text-[12px]">p/m</span>
+              </span>
+            </div>
+          </SwiperSlide>
 
-            <Image
-              src="/img/curve.png"
-              alt="Decorative curve"
-              width={800}
-              height={100}
-              className="mb-2 mt-6"
+          <SwiperSlide>
+            <div
+              className="flex flex-col items-center py-[30px] px-[15px] bg-cover bg-center bg-no-repeat relative min-h-[320px]"
               style={{
-                zIndex: 1,
-              }}
-              sizes="80vw"
-            ></Image>
+                backgroundImage: "url('/img/pricing/pricing2.png')",
+                backgroundSize: "100% 100%",
+              }}>
+              <p className="text-white text-2xl font-bold">Aff-Starter Plan</p>
 
-            <p className="text-white text-center text-[14px] mt-4 px-2 underline">
-              Core affiliate management and deal negotiation services.
-            </p>
-            <span className="text-white text-center font-bold text-[30px] mt-4">
-              €3,500
-              <span className="text-[14px]">p/m</span>
-            </span>
-          </div>
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={600}
+                height={100}
+                className="my-2"
+                style={{
+                  zIndex: 1,
+                }}
+                sizes="60vw"
+              />
 
-          <div
-            className="flex flex-col items-center py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-            style={{
-              backgroundImage: "url('/img/pricing/pricing1.png')",
-              backgroundSize: "100% 100%",
-            }}>
-            <p className="text-black text-3xl font-bold">Aff-Driver Plan</p>
+              <p className="text-white text-center text-[12px] mt-2 px-2 underline">
+                Core affiliate management and deal negotiation services.
+              </p>
+              <span className="text-white text-center font-bold text-[24px] mt-2">
+                €3,500
+                <span className="text-[12px]">p/m</span>
+              </span>
+            </div>
+          </SwiperSlide>
 
-            <Image
-              src="/img/curve.png"
-              alt="Decorative curve"
-              width={800}
-              height={100}
-              className="my-2 mt-4"
+          <SwiperSlide>
+            <div
+              className="flex flex-col items-center py-[30px] px-[15px] bg-cover bg-center bg-no-repeat relative min-h-[320px]"
               style={{
-                zIndex: 1,
-              }}
-              sizes="80vw"
-            ></Image>
+                backgroundImage: "url('/img/pricing/pricing1.png')",
+                backgroundSize: "100% 100%",
+              }}>
+              <p className="text-black text-2xl font-bold">Aff-Driver Plan</p>
 
-            <p className="text-black text-center text-[14px] mt-4 px-2 underline">
-              All Aff-Starter services plus social media management and basic
-              content creation.
-            </p>
-            <span className="text-black text-center font-bold text-[30px] mt-4">
-              €4,500
-              <span className="text-[14px]">p/m</span>
-            </span>
-          </div>
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={600}
+                height={100}
+                className="my-2"
+                style={{
+                  zIndex: 1,
+                }}
+                sizes="60vw"
+              />
 
-          <div
-            className="flex flex-col items-center py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-            style={{
-              backgroundImage: "url('/img/pricing/pricing2.png')",
-              backgroundSize: "100% 100%",
-            }}>
-            <span className="text-white text-3xl font-bold">
-              Aff-Driver
-              <span className="text-[#FF6D00] text-xl font-bold">+</span>
-              Plan
-            </span>
+              <p className="text-black text-center text-[12px] mt-2 px-2 underline">
+                All Aff-Starter services plus social media management and basic
+                content creation.
+              </p>
+              <span className="text-black text-center font-bold text-[24px] mt-2">
+                €4,500
+                <span className="text-[12px]">p/m</span>
+              </span>
+            </div>
+          </SwiperSlide>
 
-            <Image
-              src="/img/curve.png"
-              alt="Decorative curve"
-              width={800}
-              height={100}
-              className="mb-2 mt-6"
+          <SwiperSlide>
+            <div
+              className="flex flex-col items-center py-[30px] px-[15px] bg-cover bg-center bg-no-repeat relative min-h-[320px]"
               style={{
-                zIndex: 1,
-              }}
-              sizes="80vw"
-            ></Image>
+                backgroundImage: "url('/img/pricing/pricing2.png')",
+                backgroundSize: "100% 100%",
+              }}>
+              <span className="text-white text-2xl font-bold">
+                Aff-Driver
+                <span className="text-[#FF6D00] text-xl font-bold">+</span>
+                Plan
+              </span>
 
-            <p className="text-white text-center text-[14px] mt-4 px-2 underline">
-              All Aff-Driver services with enhanced optimisation and deal
-              negotiation.
-            </p>
-            <span className="text-white text-center font-bold text-[30px] mt-4">
-              €6,500
-              <span className="text-[14px]">p/m</span>
-            </span>
-          </div>
-        </Carousel>
+              <Image
+                src="/img/curve.png"
+                alt="Decorative curve"
+                width={600}
+                height={100}
+                className="my-2"
+                style={{
+                  zIndex: 1,
+                }}
+                sizes="60vw"
+              />
+
+              <p className="text-white text-center text-[12px] mt-2 px-2 underline">
+                All Aff-Driver services with enhanced optimisation and deal
+                negotiation.
+              </p>
+              <span className="text-white text-center font-bold text-[24px] mt-2">
+                €6,500
+                <span className="text-[12px]">p/m</span>
+              </span>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
       
@@ -544,202 +501,87 @@ export default function Home() {
 
         <div className="md:hidden mt-8 px-4 w-full flex justify-center items-center">
 
-          <Carousel
-                className="rounded-xl "
-                prevArrow={({ handlePrev }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handlePrev}
-                    className="!absolute top-2/4 left-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                nextArrow={({ handleNext }) => (
-                  <IconButton
-                    variant="text"
-                    color="white"
-                    size="md"
-                    onClick={handleNext}
-                    className="!absolute top-2/4 !right-4 -translate-y-2/4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="h-6 w-6">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                      />
-                    </svg>
-                  </IconButton>
-                )}
-                navigation={({ setActiveIndex, activeIndex, length }) => (
-                  <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 ">
-                    {new Array(length).fill("").map((_, i) => (
-                      <span
-                        key={i}
-                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                          activeIndex === i
-                            ? "w-4 bg-white "
-                            : "w-4 bg-white bg-opacity-20"
-                        }`}
-                        onClick={() => setActiveIndex(i)}
-                      />
-                    ))}
-                  </div>
-                )}>
-
-            <div
-              className="flex flex-col items-center min-h-[500px]  py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative mb-4"
-              style={{
-                backgroundImage: "url('/img/pricing/pricing1.png')",
-                backgroundSize: "100% 100%",
-              }}>
-              <p className="text-black text-3xl font-bold">CRM Management</p>
-              <p className="text-black text-center text-[14px] mt-4">
-                Enhance player engagement and retention with our scalable CRM solutions:
-              </p>
-
-              <Image
-                src="/img/curve.png"
-                alt="Decorative curve"
-                width={800}
-                height={100}
-                className="my-2"
-                style={{
-                  zIndex: 1,
-                }}
-                sizes="80vw"
-              ></Image>
-
-              <p className="text-black text-center text-[14px] mt-4 px-2 underline">
-                 Dedicated CRM manager Advanced optimisation tools Comprehensive retention
-              </p>
-              <span className="text-black text-center font-bold text-[30px] mt-4">
-                <span className="text-[14px] ">From</span>€2,500
-                <span className="text-[14px]">p/m</span>
-              </span>
-            </div>
-
-            <div
-              className="flex flex-col items-center min-h-[500px]  py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-              style={{
-                backgroundImage: "url('/img/pricing/pricing2.png')",
-                backgroundSize: "100% 100%",
-              }}>
-              <p className="text-white text-3xl font-bold">Social Media Management</p>
-              <p className="text-white text-center text-[14px] mt-4">
-                Build your brand&apos;s presence &amp; connect with your audience through strategic social media campaigns:
-              </p>
-              <Image
-                src="/img/curve.png"
-                alt="Decorative curve"
-                width={800}
-                height={100}
-                className="mb-2 mt-6"
-                style={{
-                  zIndex: 1,
-                }}
-                sizes="80vw"
-              ></Image>
-
-              <p className="text-white text-center text-[14px] mt-4 px-2 underline">
-              Dedicated social media manager Content creation and campaign management Performance tracking and detailed reporting
-              </p>
-              <span className="text-white text-center font-bold text-[30px] mt-4">
-                <span className="text-[14px] ">From</span>€2,500
-                <span className="text-[14px]">p/m</span>
-              </span>
-            </div>
-
-            <div
-              className="flex flex-col items-center min-h-[500px] py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-              style={{
-                backgroundImage: "url('/img/pricing/pricing1.png')",
-                backgroundSize: "100% 100%",
-              }}>
-              <p className="text-black text-3xl font-bold">Customer Service & VIP Management</p>
-              <p className="text-black text-center text-[14px] mt-4">
-               Boost player satisfaction with our multilingual, 24/7 support solutions:
-              </p>
-
-              <Image
-                src="/img/curve.png"
-                alt="Decorative curve"
-                width={800}
-                height={100}
-                className="my-2"
-                style={{
-                  zIndex: 1,
-                }}
-                sizes="80vw"
-              ></Image>
-
-              <p className="text-black text-center text-[14px] mt-4 px-2 underline">
-                 VIP management Comprehensive player support
-              </p>
-
-              <p className="text-black text-center text-3xl mt-4 font-bold ">
-              POC
-              </p>
-              <p className="text-black text-center text-xl  font-bold ">
-                (Price on Consultation)
-              </p>
-            </div>
-
-
-            <div
-              className="flex flex-col items-center  min-h-[500px] py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
-              style={{
-                backgroundImage: "url('/img/pricing/pricing2.png')",
-                backgroundSize: "100% 100%",
-              }}>
-              <span className="text-white text-3xl font-bold">
-                Customised Consultancy Services
-              </span>
-
-              <p className="text-white text-center text-[14px] mt-4">
-                Get expert advice on casino operations, payments, and legal aspects of your iGaming
-              </p>
-
-              <Image
-                src="/img/curve.png"
-                alt="Decorative curve"
-                width={800}
-                height={100}
-                className="mb-2 mt-6"
-                style={{
-                  zIndex: 1,
-                }}
-                sizes="80vw"
-              ></Image>
-
-              <p className="text-black text-center text-3xl mt-4 font-bold ">
-                POC
-              </p>
-              <p className="text-black text-center text-xl  font-bold ">
-                (Price on Consultation)
-              </p>
-            </div>
-
-         </Carousel>
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="md:hidden mt-8 w-[80%]"
+          >
+            {[
+              {
+                title: "CRM Management",
+                description: "Enhance player engagement and retention with our scalable CRM solutions:",
+                details: "Dedicated CRM manager Advanced optimisation tools Comprehensive retention",
+                price: "€2,500",
+                bgImage: "pricing1.png",
+                textColor: "black"
+              },
+              {
+                title: "Social Media Management",
+                description: "Build your brand's presence & connect with your audience through strategic social media campaigns:",
+                details: "Dedicated social media manager Content creation and campaign management Performance tracking and detailed reporting",
+                price: "€2,500",
+                bgImage: "pricing2.png",
+                textColor: "white"
+              },
+              {
+                title: "Customer Service & VIP Management",
+                description: "Boost player satisfaction with our multilingual, 24/7 support solutions:",
+                details: "VIP management Comprehensive player support",
+                price: "POC",
+                bgImage: "pricing1.png",
+                textColor: "black",
+                isPOC: true
+              },
+              {
+                title: "Customised Consultancy Services",
+                description: "Get expert advice on casino operations, payments, and legal aspects of your iGaming",
+                price: "POC",
+                bgImage: "pricing2.png",
+                textColor: "white",
+                isPOC: true
+              }
+            ].map((slide, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="flex flex-col items-center min-h-[400px]  pt-[50px] px-[15px] bg-cover bg-center bg-no-repeat relative"
+                  style={{
+                    backgroundImage: `url('/img/pricing/${slide.bgImage}')`,
+                    backgroundSize: "100% 100%",
+                  }}>
+                  <p className={`text-${slide.textColor} text-2xl font-bold`}>{slide.title}</p>
+                  <p className={`text-${slide.textColor} text-center text-[12px] mt-2`}>
+                    {slide.description}
+                  </p>
+                  <Image
+                    src="/img/curve.png"
+                    alt="Decorative curve"
+                    width={600}
+                    height={100}
+                    className="my-2"
+                    style={{ zIndex: 1 }}
+                    sizes="60vw"
+                  />
+                  {slide.details && (
+                    <p className={`text-${slide.textColor} text-center text-[12px] mt-2 px-2 underline`}>
+                      {slide.details}
+                    </p>
+                  )}
+                  {slide.isPOC ? (
+                    <>
+                      <p className="text-black text-center text-2xl mt-2 font-bold">POC</p>
+                      <p className="text-black text-center text-base font-bold">(Price on Consultation)</p>
+                    </>
+                  ) : (
+                    <span className={`text-${slide.textColor} text-center font-bold text-[24px] mt-2`}>
+                      <span className="text-[12px]">From</span>{slide.price}
+                      <span className="text-[12px]">p/m</span>
+                    </span>
+                  )}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
         </div>
 

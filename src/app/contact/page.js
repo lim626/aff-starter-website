@@ -105,8 +105,8 @@ export default function Contact() {
               <div className="flex justify-center md:justify-start">
 
 
-                <Button size="lg" className="rounded-full text-black bg-white mt-16 md:mt-0">
-                  Schedule a Free Consultation
+                <Button size="lg" className="rounded-full text-black bg-white mt-16 md:mt-0" >
+                  <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" >Schedule a Free Consultation</a>
                 </Button>
               </div>
             </motion.div>
