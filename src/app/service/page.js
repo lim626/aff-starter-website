@@ -205,7 +205,7 @@ export default function Home() {
               </p>
               <p className="md:text-[2vw] md:mt-16 mt-4 text-white text-center md:text-left">
                 Maximize player lifetime value and build lasting loyalty with
-                Aff-Starter's Retention Management services. Our tailored
+                Aff-Starter&apos;s Retention Management services. Our tailored
                 strategies keep players engaged, satisfied, and coming back for
                 more.
               </p>
@@ -286,8 +286,8 @@ export default function Home() {
             loyal player base?
           </p>
           <p className="text-center mt-8 md:text-[20px]">
-            Explore how Aff-Starter's Retention Management services can enhance
-            player loyalty and boost your brand's long-term success. Contact us
+            Explore how Aff-Starter&apos;s Retention Management services can enhance
+            player loyalty and boost your brand&apos;s long-term success. Contact us
             today to learn more.
           </p>
           <div className="flex w-full justify-center items-center md:pb-8 pb-12">
@@ -310,7 +310,7 @@ export default function Home() {
           Social Media Managed Services
         </p>
         <p className="md:w-[50vw] w-[80vw] text-center mt-8 md:text-2xl ">
-          Take your brand to the next level with Aff-Starter's Social Media
+          Take your brand to the next level with Aff-Starter&apos;s Social Media
           Managed Services. Combined with our QuestTracker gamification
           platform, we turn social media into a powerful tool for engagement,
           loyalty, and growth.
@@ -403,7 +403,7 @@ export default function Home() {
           <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8">
             <p className="text-black text-center">
               Keep your players happy and supported, anytime, anywhere. With
-              Workanova's 24/7 multilingual support, we cater to players in
+              Workanova&apos;s 24/7 multilingual support, we cater to players in
               multiple languages, ensuring they receive prompt, knowledgeable
               assistance whenever they need it.
             </p>

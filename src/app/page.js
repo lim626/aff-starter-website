@@ -184,7 +184,7 @@ export default function Home() {
               Aff-Starter offers a full suite of managed services designed to
               drive player retention, boost traffic, and deliver top-tier
               customer support. From affiliate management to social media
-              strategies, we've got you covered.
+              strategies, we&apos;ve got you covered.
             </p>
           </div>
 
@@ -525,7 +525,7 @@ export default function Home() {
               </p>
             </span>
             <p className="md:text-[1.5vw] mt-8 text-center md:text-left px-8 md:px-0">
-              Don't take our word for it—see how we've helped brands like yours
+              Don&apos;t take our word for it—see how we&apos;ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
             <div className="hidden md:block">
