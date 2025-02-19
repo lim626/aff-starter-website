@@ -133,7 +133,7 @@ export default function Home() {
                   }}></img>
                 <p className="text-[20px] text-center">
                   Boost engagement with localized content. We offer strategic
-                  advice on adapting your brand's messaging and promotions to
+                  advice on adapting your brand&apos;s messaging and promotions to
                   resonate with local audiences, helping you drive conversions
                   with culturally relevant campaigns.
                 </p>
