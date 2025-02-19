@@ -126,7 +126,7 @@ export default function Home() {
             </p>
             <div className="flex lg:justify-start justify-center">
               <Button className="bg-[#F25411] flex lg:text-xl text-[22px] items-center rounded-[30px] mt-10">
-                <a href="https://calendar.app.google/9RhX95NA3kyXy2F46">Get Started</a>
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23NPjR0Yl7OGgLopAFdct7csamTsF8N0ofToB6IyFLEhueKemhmWcRh8_-_rZPM70044SfEYCz">Get Started</a>
                 <img
                   src="./img/icon_start.png"
                   className="ml-2 hidden lg:block"></img>
@@ -565,7 +565,7 @@ export default function Home() {
                     <div className="px-4 mt-2">
                       <p className="font-bold text-gray-200 text-[12px]">Betterwin:</p>
                       <p className="text-[10px] text-gray-200 my-2">
-                        "Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch."
+                        &quot;Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch.&quot;
                       </p>
                       <p className="font-bold text-[12px] text-gray-200">Raj - Founder and CEO</p>
                     </div>
@@ -578,7 +578,7 @@ export default function Home() {
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Playfrank:</p>
                       <p className="text-[10px] text-gray-200 my-4">
-                        "Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively."
+                        &quot;Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively.&quot;
                       </p>
                       <p className="font-bold text-[12px] text-gray-200">Michel - Founder and CEO</p>
                     </div>
@@ -591,7 +591,7 @@ export default function Home() {
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Quickspinner:</p>
                       <p className="text-[10px] text-gray-200 my-4">
-                        "With Nathan at the helm of our affiliate program, managed by Aff-Starter, we&apos;ve seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward."
+                        &quot;With Nathan at the helm of our affiliate program, managed by Aff-Starter, we&apos;ve seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward.&quot;
                       </p>
                       <p className="font-bold text-[12px] text-gray-200">Michel - Founder and CEO</p>
                     </div>
@@ -604,7 +604,7 @@ export default function Home() {
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Wasino:</p>
                       <p className="text-[10px] text-gray-200 my-4">
-                        "Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth."
+                        &quot;Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth.&quot;
                       </p>
                       <p className="font-bold text-[12px] text-gray-200">Andy - CEO</p>
                     </div>
@@ -617,7 +617,7 @@ export default function Home() {
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Loothoot:</p>
                       <p className="text-[10px] text-gray-200 my-4">
-                        "At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market."
+                        &quot;At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market.&quot;
                       </p>
                       <p className="font-bold text-[12px] text-gray-200">Francisco - CEO</p>
                     </div>
@@ -737,8 +737,7 @@ export default function Home() {
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth.&quot;
                       </p>
-                      <p className="font-bold text-[18px] text-gray-200">Andy - CEO
-                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Andy - CEO</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -751,8 +750,7 @@ export default function Home() {
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market.&quot;
                       </p>
-                      <p className="font-bold text-[18px] text-gray-200">Francisco - CEO
-                      </p>
+                      <p className="font-bold text-[18px] text-gray-200">Francisco - CEO</p>
                     </div>
                   </div>
                 </SwiperSlide>
