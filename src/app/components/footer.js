@@ -15,7 +15,7 @@ export default function Footer() {
             width="180"
             height="85"
             alt="Logo"
-            className="object-contain"></img>
+            className="object-contain" onClick={() => router.push("/")}></img>
           <span className="text-4xl  text-white font-bold flex mt-8">
             Need
             <p className="text-[#6DE0F6] ml-2 border-b border-b-[4px] pb-2 border-[#D0098D]">
@@ -40,17 +40,30 @@ export default function Footer() {
           <p className="mt-2">Monday - Saturday:8AM - 4PM</p>
         </div> */}
 
-        <div className="text-white">
+        <div className="text-white flex flex-col">
           <p className="font-semibold text-2xl">CONTACT WITH US</p>
           <p className="mt-8">
             Eleate Your Journey with Aff-Starter! Schedule a FREE Consultation
             and Discovery Session Today!
           </p>
-          <p className="mt-2 text-[#6DE0F6]">Phone: +35679081137</p>
-          <p className="mt-2 text-[#6DE0F6]">Email: lloyd@aff-starter.com</p>
+          <a 
+          href="https://wa.me/35679081137" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-[18px] mt-4  hover:text-white cursor-pointer text-[#6DE0F6]"
+        >
+          Phone: +35679081137
+        </a>
+
+          <a 
+            href="mailto:lloyd@aff-starter.com" 
+            className="text-[#6DE0F6] text-[18px] font-bold font-['regular'] hover:text-white cursor-pointer"
+          >
+            Email: lloyd@aff-starter.com
+          </a>
         </div>
       </div>
-      <span className="text-[22px]  text-gray-300 font-bold md:flex mt-16 hidden ">
+      <span className="text-[22px]  text-gray-300 font-bold md:flex mt-16 hidden font-['regular'] text-center">
         @2024 Aff-Starter by
         <p className="text-[#6DE0F6] mx-2">Lim, Sam, Nathan</p>
       </span>

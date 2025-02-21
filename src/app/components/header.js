@@ -66,7 +66,7 @@ export default function Header() {
           width="120"
           height="63"
           alt="Logo"
-          className="object-contain"></img>
+          className="object-contain" onClick={() => router.push('/')}></img>
 
         <div className="flex hidden lg:flex">
           <nav class=" text-[1.3vw] flex items-center text-white">

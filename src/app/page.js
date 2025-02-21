@@ -54,10 +54,13 @@ export default function Home() {
     }
   };
 
-  
+  const scrollToConsultancy = () => {
+    const element = document.getElementById('consultancy');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-
-  
   useEffect(() => {
     // Set initial button text
     handleResize();
@@ -126,7 +129,7 @@ export default function Home() {
             </p>
             <div className="flex lg:justify-start justify-center">
               <Button className="bg-[#F25411] flex lg:text-xl text-[22px] items-center rounded-[30px] mt-10">
-                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23NPjR0Yl7OGgLopAFdct7csamTsF8N0ofToB6IyFLEhueKemhmWcRh8_-_rZPM70044SfEYCz">Get Started</a>
+              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Get Started</a>
                 <img
                   src="./img/icon_start.png"
                   className="ml-2 hidden lg:block"></img>
@@ -135,11 +138,26 @@ export default function Home() {
           </div>
 
           <div className="mt-16 flex hidden lg:flex gap-4 lg:text-2xl text-[22px] items-center">
-            <img src="./img/mark5.jpg" className="w-[100px] h-[40px] object-contain"></img>
-            <span className="h-[40px] flex items-center">||</span>
-            <img src="./img/mark6.jpg" className="w-[100px] h-[40px] object-contain"></img>
-            <span className="h-[40px] flex items-center">||</span>
-            <img src="./img/mark7.jpg" className="w-[100px] h-[40px] object-contain"></img>
+            <img 
+              src="./img/mark2.png" 
+              className="w-[100px] h-[40px] object-contain cursor-pointer" 
+              onClick={scrollToConsultancy}
+            />
+            <img 
+              src="./img/mark5.jpg" 
+              className="w-[100px] h-[40px] object-contain cursor-pointer"
+              onClick={scrollToConsultancy}
+            />
+            <img 
+              src="./img/mark6.jpg" 
+              className="w-[100px] h-[40px] object-contain cursor-pointer"
+              onClick={scrollToConsultancy}
+            />
+            <img 
+              src="./img/mark7.jpg" 
+              className="w-[100px] h-[40px] object-contain cursor-pointer"
+              onClick={scrollToConsultancy}
+            />
           </div>
         </div>
         <div
@@ -338,9 +356,9 @@ export default function Home() {
           </div>
           <div className="flex lg:justify-start justify-center">
             {" "}
-            <Button className="md:bg-[#F25411] bg-[#F14902] flex text-xl lg:py-5 px-8 items-center rounded-[35px] mt-10 normal-case ">
+            {/* <Button className="md:bg-[#F25411] bg-[#F14902] flex text-xl lg:py-5 px-8 items-center rounded-[35px] mt-10 normal-case ">
               Discover QuestTracker
-            </Button>
+            </Button> */}
           </div>
         </div>
 
@@ -365,8 +383,8 @@ export default function Home() {
 
           <div>
             <img
-              src="./img/logo-affiliu.png"
-              className="50vw lg:mt-72 mt-48"></img>
+              src="./img/affliu-soon.png"
+              className="md:w-[50vw] lg:mt-72 mt-48"></img>
           </div>
           <div className="lg:w-[30vw] text-white text-center mt-12">
             <p className="lg:text-[3.5vw] text-[24px] font-bold lg:flex text-[#6DE0F6]  lg:flex-col leading-tight">
@@ -386,11 +404,11 @@ export default function Home() {
             <div className="md:hidden">
               <img src="./img/bg/bg-4 -1-2.png" className="50vw "></img>
             </div>
-            <div className="md:mb-32 mb-12 flex items-center justify-center">
+            <div className="md:mb-32 mb-12 flex items-center justify-center h-8">
               {" "}
-              <Button className="bg-[#F25411] flex text-xl md:py-5 py-2  md:px-8 px-4 items-center rounded-[35px] mt-0 md:mt-10 normal-case">
+              {/* <Button className="bg-[#F25411] flex text-xl md:py-5 py-2  md:px-8 px-4 items-center rounded-[35px] mt-0 md:mt-10 normal-case">
                 {exploreText}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -455,14 +473,14 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div>
-            <Button className="bg-[#0FC3C3] flex md:text-[22px] text-[18px] md:py-5 py-1 md:px-12 px-4 items-center rounded-[35px] mt-10 normal-case">
-              {solutionText}
+          <div className="">
+            <Button className="bg-[#0FC3C3] flex md:text-[22px] text-[18px] md:py-5 py-1 md:px-12 px-4 items-center rounded-[35px] mt-10">
+              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Schedule a call</a>
             </Button>
           </div>
         </div>
 
-        <div
+        <div id="consultancy"
           className="consultancy relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
           style={{
             // backgroundImage: "url('./img/bg/bg-6.png')",
@@ -471,7 +489,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             zIndex: 10,
           }}>
-          <div>
+          <div >
             {" "}
             <div className="md:w-[37vw] px-8 rounded-[20px]  md:mt-12 mt-4 md:py-12 py-4 flex flex-col text-center md:text-left items-center md:items-left">
               <span className="md:text-[3vw] text-[20px]  md:text-left font-bold flex-col text-white  leading-tight">
@@ -495,7 +513,7 @@ export default function Home() {
             <div className="px-8 flex justify-center">
               {" "}
               <Button className="bg-[#F25411] flex text-xl py-3 md:px-8 px-4 text-[15px] md:text-[22px] items-center rounded-[35px] md:mt-10 normal-case">
-                Discover QuestTracker
+                <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Schedule a consultaion</a>
               </Button>
             </div>
           </div>
@@ -563,7 +581,7 @@ export default function Home() {
                   <div className="flex flex-col bg-[#7F07EF] items-center px-2 py-2 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-2">
-                      <p className="font-bold text-gray-200 text-[12px]">Betterwin:</p>
+                      <p className="font-bold text-gray-200 text-[12px]">Betterwin</p>
                       <p className="text-[10px] text-gray-200 my-2">
                         &quot;Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch.&quot;
                       </p>
@@ -576,7 +594,7 @@ export default function Home() {
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
-                      <p className="font-bold text-gray-200 text-[12px]">Playfrank:</p>
+                      <p className="font-bold text-gray-200 text-[12px]">Playfrank</p>
                       <p className="text-[10px] text-gray-200 my-4">
                         &quot;Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively.&quot;
                       </p>
@@ -589,7 +607,7 @@ export default function Home() {
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
-                      <p className="font-bold text-gray-200 text-[12px]">Quickspinner:</p>
+                      <p className="font-bold text-gray-200 text-[12px]">Quickspinner</p>
                       <p className="text-[10px] text-gray-200 my-4">
                         &quot;With Nathan at the helm of our affiliate program, managed by Aff-Starter, we&apos;ve seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward.&quot;
                       </p>
@@ -602,7 +620,7 @@ export default function Home() {
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
-                      <p className="font-bold text-gray-200 text-[12px]">Wasino:</p>
+                      <p className="font-bold text-gray-200 text-[12px]">Wasino</p>
                       <p className="text-[10px] text-gray-200 my-4">
                         &quot;Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth.&quot;
                       </p>
@@ -615,7 +633,7 @@ export default function Home() {
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
-                      <p className="font-bold text-gray-200 text-[12px]">Loothoot:</p>
+                      <p className="font-bold text-gray-200 text-[12px]">Loothoot</p>
                       <p className="text-[10px] text-gray-200 my-4">
                         &quot;At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market.&quot;
                       </p>
@@ -683,7 +701,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">LuckyWhale:</p>
+                      <p className="font-bold text-gray-200 text-[26px]">LuckyWhale</p>
                       <p className=" text-[16px] text-gray-200 my-4">
                         &quot;LuckyWhale&apos;s collaboration with Aff-Starter has transformed our operations, driving remarkable growth in customer acquisition through expert affiliate management. Their team not only enhanced our CRM strategies but also redesigned our bonus and promotion approaches, leading to a significant increase in engagement and revenue.&quot;
                       </p>
@@ -696,7 +714,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-4 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">Betterwin :</p>
+                      <p className="font-bold text-gray-200 text-[26px]">Betterwin</p>
                       <p className=" text-[16px] text-gray-200 my-4">
                         &quot;Aff-Starter has been a pivotal partner in our journey from three months before launch to our initial week live. Their comprehensive support in setting up our affiliate program and overseeing our casino and sportsbook setup has been phenomenal. From strategizing bonuses and promotions to designing our creative assets, their expertise was integral to ensuring a smooth and successful launch.&quot;
                       </p>
@@ -709,7 +727,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">Playfrank:</p>
+                      <p className="font-bold text-gray-200 text-[26px]">Playfrank</p>
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;Nathan from Aff-Starter has expertly led our affiliate program, aligning it perfectly with UKGC regulations and driving significant growth. His strategic guidance has been crucial in expanding our market presence effectively.&quot;
                       </p>
@@ -721,7 +739,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">Quickspinner:</p>
+                      <p className="font-bold text-gray-200 text-[26px]">Quickspinner</p>
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;With Nathan at the helm of our affiliate program, managed by Aff-Starter, we&apos;ve seen remarkable enhancements in our operations. His deep understanding of the UKGC guidelines and affiliate management has propelled our brand forward.&quot;
                       </p>
@@ -733,7 +751,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">Wasino:</p>
+                      <p className="font-bold text-gray-200 text-[26px]">Wasino</p>
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;Over the past six months, Aff-Starter has been instrumental in navigating through some challenging periods for Wasino. Their steadfast support and expert management of our affiliate program have not only helped us stabilize but also position ourselves for future growth.&quot;
                       </p>
@@ -746,7 +764,7 @@ export default function Home() {
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
                     <img src="./img/avarta.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
-                      <p className="font-bold text-gray-200 text-[26px]">Loothoot:</p>
+                      <p className="font-bold text-gray-200 text-[26px]">Loothoot</p>
                       <p className=" text-[18px] text-gray-200 my-4">
                         &quot;At Loothoot, leveraging the right influencers and streamers is crucial to our success, and Aff-Starter has been exceptional in this area. Their targeted approach has greatly enhanced our visibility and engagement, helping us stand out in the competitive unboxing market.&quot;
                       </p>

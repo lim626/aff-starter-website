@@ -12,6 +12,20 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <main className="flex w-full flex-col min-h-screen ">
       <div
@@ -59,6 +73,16 @@ export default function Home() {
 
 
       <div className="flex flex-col items-center text-center px-4 my-10 w-full md:px-[15%]">
+        <div
+            className="w-full h-full absolute left-0 md:block hidden"
+            style={{
+              zIndex: -1,
+              transform: `translateY(${scrollY * 0.3 - 80}px)`,
+              pointerEvents: "none",
+            }}>
+            <img src="./img/bg/bg-3.png" className=" w-[80%] h-full"></img>
+        </div>
+        
         <p className="md:text-6xl text-3xl font-bold text-black">
           Affiliate Management Pricing
         </p>

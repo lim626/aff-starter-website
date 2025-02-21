@@ -17,7 +17,7 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [scrollY, setScrollY] = useState(0);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
@@ -25,6 +25,19 @@ export default function Contact() {
       [name]: value
     }));
   };
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -106,7 +119,7 @@ export default function Contact() {
 
 
                 <Button size="lg" className="rounded-full text-black bg-white mt-16 md:mt-0" >
-                  <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" >Schedule a Free Consultation</a>
+                  <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Schedule a Free Consultation</a>
                 </Button>
               </div>
             </motion.div>
@@ -122,6 +135,15 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
+          <div
+            className="w-full h-full absolute left-0 md:block hidden"
+            style={{
+              zIndex: -1,
+              transform: `translateY(${scrollY * 0.3 - 100}px)`,
+              pointerEvents: "none",
+            }}>
+            <img src="./img/bg/bg-3.png" className=" w-full h-full"></img>
+          </div>
             <h2 className="text-2xl md:text-4xl font-bold max-w-4xl mx-auto">
               At Aff-Starter, we&apos;re passionate about supporting iGaming brands like yours. Whether you need affiliate management, CRM solutions, or social media expertise, our team is here to help.
             </h2>
@@ -136,7 +158,7 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold mb-2">Lloyd Slade</h3>
               <p className="text-lg font-semibold mb-2">CEO / CMO</p>
-              <a href="mailto:lloyd@aff-starter.com" className="text-blue-900 hover:text-blue-700">
+              <a href="mailto:lloyd@aff-starter.com" className="text-blue-900 hover:text-blue-700 font-bold font-['regular']">
                 lloyd@aff-starter.com
               </a>
             </motion.div>
@@ -149,7 +171,7 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold mb-2 text-white">Anna Maria Pistika</h3>
               <p className="text-lg font-semibold mb-2 text-white">Casino Operations Director</p>
-              <a href="mailto:anna@aff-starter.com" className="text-blue-100 hover:text-blue-200">
+              <a href="mailto:anna@aff-starter.com" className="text-blue-100 hover:text-blue-200 font-['regular']">
                 anna@aff-starter.com
               </a>
             </motion.div>
@@ -162,7 +184,7 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold mb-2 text-white">Emma Slade</h3>
               <p className="text-lg font-semibold mb-2 text-white">Projects Director</p>
-              <a href="mailto:emma@aff-starter.com" className="text-blue-100 hover:text-blue-200">
+              <a href="mailto:emma@aff-starter.com" className="text-blue-100 hover:text-blue-200 font-['regular']">
                 emma@aff-starter.com
               </a>
             </motion.div>
@@ -175,7 +197,7 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold mb-2">Stavros Dafnomilis</h3>
               <p className="text-lg font-semibold mb-2">Director of Casino Management</p>
-              <a href="mailto:stavros@aff-starter.com" className="text-blue-900 hover:text-blue-700">
+              <a href="mailto:stavros@aff-starter.com" className="text-blue-900 hover:text-blue-700 font-['regular']">
                 stavros@aff-starter.com
               </a>
             </motion.div>

@@ -30,7 +30,7 @@ import { EffectCards } from 'swiper/modules';
 export default function Home() {
   const router = useRouter();
   const [imageSrc, setImageSrc] = useState("./img/bg/bg-affilue-t.png");
-
+  const [scrollY, setScrollY] = useState(0);
   const handleResize = () => {
     if (window.innerWidth >= 1024) {
       setImageSrc("./img/bg/bg-affilue-t.png");
@@ -39,11 +39,19 @@ export default function Home() {
     }
   };
 
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+ 
+
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -56,7 +64,7 @@ export default function Home() {
           <div
             className="flex flex-col items-center w-full relative "
             style={{
-              backgroundImage: "url('./img/bg/bg-affilue-2.png')",
+              // backgroundImage: "url('./img/bg/bg-affilue-2.png')",
               backgroundSize: "cover",
               backgroundPosition: "top",
               backgroundRepeat: "no-repeat",
@@ -68,6 +76,21 @@ export default function Home() {
               style={{
                 zIndex: 1,
               }}></img>
+
+            <div
+             className="w-full h-full absolute left-0 md:block hidden flex  items-center"
+             style={{
+              zIndex: 1,
+              transform: `translateY(${scrollY * 0.3}px)`,
+              pointerEvents: "none",
+             }}>
+             <img src="./img/bg/bg-affilue-2.png" style={{
+                zIndex: 1,
+              }} className=" w-[80%] h-full"></img>
+           </div>
+
+
+
             <div
               style={{ zIndex: 10 }}
               className="flex flex-col items-center md:w-[65%] w-[85%] mt-[3vw] text-[24px]  md:text-5xl xxl:text-6xl">
@@ -84,7 +107,7 @@ export default function Home() {
 
 
             <div className="hidden md:grid md:grid-cols-4 grid-cols-2 items-center w-[75%] mt-[3vw] gap-8">
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-8 bg-[#59DEEB] h-full">
+              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-8 bg-[#59DEEB] h-full" style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Affiliate Onboarding
                 </p>
@@ -102,7 +125,7 @@ export default function Home() {
                   effective and lasting partnerships.
                 </p>
               </div>
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white ">
+              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center px-8">
                   Localized Affiliates
                 </p>
@@ -120,7 +143,7 @@ export default function Home() {
                   addressing any questions or concerns.
                 </p>
               </div>
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#59DEEB] h-full">
+              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#59DEEB] h-full" style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Expert Guidance in Brand Localization
                 </p>
@@ -138,7 +161,7 @@ export default function Home() {
                   with culturally relevant campaigns.
                 </p>
               </div>
-              <div className="flex flex-col  items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white ">
+              <div className="flex flex-col  items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Ongoing Account Management
                 </p>
@@ -222,7 +245,7 @@ export default function Home() {
                 <SwiperSlide>
                   <div className="flex flex-col items-center justify-center  px-6 py-8 bg-white h-full">
                     <p className="font-bold text-2xl text-center text-black">
-                      Personalized Engagement and Targeted Campaigns
+                      CRM Expertise On-Demand
                     </p>
                     <img
                       src="./img/curve-black.png"
@@ -233,17 +256,14 @@ export default function Home() {
                       }}
                     />
                     <p className="text-[20px] font-normal text-center text-black">
-                      Connect with players on a personal level. We create
-                      targeted campaigns and tailor messaging based on
-                      player preferences, ensuring that every interaction
-                      feels relevant and engaging.
+                      Need a CRM manager? We provide skilled professionals who adapt to your existing systems to maximize customer engagement and drive long-term loyalty.
                     </p>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="flex flex-col items-center justify-center  px-6 py-6 bg-white h-full">
                     <p className="font-bold text-2xl text-center text-black">
-                      Personalized Engagement and Targeted Campaigns
+                      Cost-Effective CRM Management - Reduce Overheads!
                     </p>
                     <img
                       src="./img/curve-black.png"
@@ -254,10 +274,7 @@ export default function Home() {
                       }}
                     />
                     <p className="text-[20px] font-normal text-center text-black">
-                      Connect with players on a personal level. We create
-                      targeted campaigns and tailor messaging based on
-                      player preferences, ensuring that every interaction
-                      feels relevant and engaging.
+                      Manage your CRM with skilled experts, minizing the need for in-house training and resourcesand personnel expenses.
                     </p>
                   </div>
                 </SwiperSlide>
@@ -329,48 +346,93 @@ export default function Home() {
                 className="cards-swiper !mt-0 !bg-none"
               >
                 <SwiperSlide className="!w-[250px]">
-                  <div className=" flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
-                    <img 
-                      src="./img/cards/1.svg" 
-                      alt="Social Media Service 1"
-                      className="w-[50%] h-auto rounded-lg mx-auto"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="!w-[250px]" >
                   <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
-                    <img 
-                      src="./img/cards/2.svg"
-                      alt="Social Media Service 2" 
-                      className="w-[50%] h-auto rounded-lg mx-auto"
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide className="!w-[250px]"> 
-                  <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
-                    <img 
-                      src="./img/cards/3.svg"
-                      alt="Social Media Service 2" 
-                      className="w-[50%] h-auto rounded-lg mx-auto"
-                    />
+                    <div className="relative w-[50%]">
+                      <img 
+                        src="./img/blank.png" 
+                        alt="Social Media Service 1"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                        <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-white">Social Media Management &amp; Strategy</p>
+                        <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Master your social media landscape with our strategic management services. We plan and execute a tailored strategy across all platforms to increase your brand&apos;s visibility and engagement, ensuring your social media efforts align with your business goals.
+                        </p>
+
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
-                    <img 
-                      src="./img/cards/4.svg"
-                      alt="Social Media Service 2" 
-                      className="w-[50%] h-auto rounded-lg mx-auto"
-                    />
+                    <div className="relative w-[50%]">
+                      <img 
+                        src="./img/blank.png" 
+                        alt="Social Media Service 1"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                      <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-white">Content Creation - Visual &amp; Text</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                           Elevate your brand with compelling content. Our team crafts high-quality visuals and engaging text that resonates with your audience, driving interactions and building lasting connections on every social media channel.
+                        </p>
+
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
-                    <img 
-                      src="./img/cards/5.svg"
-                      alt="Social Media Service 2" 
-                      className="w-[50%] h-auto rounded-lg mx-auto"
-                    />
+                    <div className="relative w-[50%]">
+                      <img 
+                        src="./img/blank.png" 
+                        alt="Social Media Service 1"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                      <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-white">Discord Community Management</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Create a vibrant community on Discord with our management services. We set up, manage, and nurture your Discord server to foster engagement, organize events, and ensure a dynamic interaction space that reflects your brand&apos;s values and connects deeply with users.
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
+                    <div className="relative w-[50%]">
+                      <img 
+                        src="./img/blank.png" 
+                        alt="Social Media Service 1"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                      <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-white">Influencer Collaboration</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Connect with the perfect influencers to amplify your brand. We manage all aspects of influencer partnerships, from selection to campaign execution, ensuring influencers align with your brand values and reach your target demographics effectively.
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide className="!w-[250px]">
+                  <div className="flex flex-col items-center justify-center mx-auto w-full rounded-[20px] font-['Bobby_Jones_Soft']">
+                    <div className="relative w-[50%]">
+                      <img 
+                        src="./img/blank.png" 
+                        alt="Social Media Service 1"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+                      <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-white">Community Engagement</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Keep your community active and engaged. Our team specializes in maintaining a lively presence on your social platforms, responding to comments, initiating discussions, and managing your brand image to strengthen customer loyalty and satisfaction.
+                        </p>
+
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
 
@@ -402,10 +464,7 @@ export default function Home() {
         <div className="mt-8 grid md:grid-cols-2 gap-4 w-full md:px-[20%] px-[5%] md:mb-16">
           <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8">
             <p className="text-black text-center">
-              Keep your players happy and supported, anytime, anywhere. With
-              Workanova&apos;s 24/7 multilingual support, we cater to players in
-              multiple languages, ensuring they receive prompt, knowledgeable
-              assistance whenever they need it.
+              <strong>24/7 multilingual support</strong> Keep your players supported around the clock. Our multilingual team provides immediate, knowledgeable assistance, ensuring a seamless experience wherever they are.
             </p>
           </div>
 
