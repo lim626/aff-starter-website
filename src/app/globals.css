@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow: scroll;
+}
+
 body {
- 
+  overflow: overlay;
 }
 
 dialog {

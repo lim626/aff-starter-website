@@ -72,7 +72,7 @@ export default function Home() {
             <div></div>
             <img
               src="./img/Octo.png"
-              className="w-[30vw] md:w-[20vw]"
+              className="w-[30vw] md:w-[20vw] hover:animate-scale"
               style={{
                 zIndex: 1,
               }}></img>
@@ -107,7 +107,7 @@ export default function Home() {
 
 
             <div className="hidden md:grid md:grid-cols-4 grid-cols-2 items-center w-[75%] mt-[3vw] gap-8">
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-8 bg-[#59DEEB] h-full" style={{zIndex:2}}>
+              <div className="flex flex-col items-center border-black hover:animate-scale border-[3px] rounded-[30px] w-[17vw] px-6 py-8 bg-[#59DEEB] h-full" style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Affiliate Onboarding
                 </p>
@@ -125,7 +125,7 @@ export default function Home() {
                   effective and lasting partnerships.
                 </p>
               </div>
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
+              <div className="flex flex-col items-center hover:animate-scale border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center px-8">
                   Localized Affiliates
                 </p>
@@ -143,7 +143,7 @@ export default function Home() {
                   addressing any questions or concerns.
                 </p>
               </div>
-              <div className="flex flex-col items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#59DEEB] h-full" style={{zIndex:2}}>
+              <div className="flex flex-col items-center border-black hover:animate-scale border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#59DEEB] h-full" style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Expert Guidance in Brand Localization
                 </p>
@@ -161,7 +161,7 @@ export default function Home() {
                   with culturally relevant campaigns.
                 </p>
               </div>
-              <div className="flex flex-col  items-center border-black border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
+              <div className="flex flex-col  items-center border-black hover:animate-scale border-[3px] rounded-[30px] w-[17vw] px-6 py-6 bg-[#6D12D8] h-full text-white " style={{zIndex:2}}>
                 <p className="font-bold text-2xl text-center">
                   Ongoing Account Management
                 </p>
@@ -213,7 +213,7 @@ export default function Home() {
 
       <div className="">
         <div
-          className="retention h-[150vh] px-[10%] xxl:px-[15%] pt-32 md:pt-0"
+          className="retention h-[100vh] md:h-[150vh] px-[10%] xxl:px-[15%] pt-32 md:pt-0"
           style={{
             // backgroundImage: "url(./img/bg/bg-affilue-3.png)",
             backgroundSize: "cover",
@@ -221,7 +221,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}>
           <div className=" md:grid md:grid-cols-2 h-full justify-center items-center">
-            <div className="">
+            <div className="hover:animate-scale">
               <p className="md:text-[3vw] text-[25px] font-bold  text-white text-center md:text-left leading-tight">
                 <span className="md:text-[#70E8FC]">RETENTION </span> MANAGED
                 SERVICES{" "}
@@ -292,7 +292,7 @@ export default function Home() {
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}>
-        <div className="mt-4 md:w-[30vw] w-[60vw]">
+        <div className="mt-4 md:w-[30vw] hover:animate-scale w-[60vw]">
           <img src="./img/rewards.png"></img>
         </div>
         <div className="flex flex-col items-center md:w-[35vw] w-[90vw] justify-center mt-8">
@@ -334,7 +334,7 @@ export default function Home() {
         </p>
         <div className="flex">
           <p className="font-bold text-4xl mt-4">SWIPE</p>
-          <div className="mt-8 ml-4">
+          <div className="mt-8 ml-4 hover:animate-scale">
             <img src="./img/arrow.png"></img>
           </div>
         </div>
@@ -462,37 +462,37 @@ export default function Home() {
           enhance player satisfaction and loyalty.
         </p>
         <div className="mt-8 grid md:grid-cols-2 gap-4 w-full md:px-[20%] px-[5%] md:mb-16">
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 hover:animate-scale">
             <p className="text-black text-center">
-              <strong>24/7 multilingual support</strong> Keep your players supported around the clock. Our multilingual team provides immediate, knowledgeable assistance, ensuring a seamless experience wherever they are.
+              <strong>24/7 Multilingual Support</strong> ensures constant assistance in mutliple languages. Our multilingual team provides immediate, knowledgeable assistance, ensuring a seamless experience wherever they are.
             </p>
           </div>
 
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
             <p className="text-white text-center text-4xl font-bold">
               Dedicated Player Assistance
             </p>
           </div>
 
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
             <p className="text-white text-center text-4xl font-bold">
               Proactive Issue Resolution
             </p>
           </div>
 
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full hover:animate-scale">
             <p className="text-black text-center text-4xl font-bold">
               PrAdvanced Support Tools
             </p>
           </div>
 
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full hover:animate-scale">
             <p className="text-black text-center text-4xl font-bold">
               Real-Time Feedback & Continuous Improvement
             </p>
           </div>
 
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full">
+          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
             <p className="text-white text-center text-4xl font-bold">
               Ready to elevate your customer support?
             </p>

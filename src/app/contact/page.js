@@ -154,7 +154,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-cyan-400 rounded-3xl p-8 shadow-lg"
+              className="bg-cyan-400 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
               <h3 className="text-2xl font-bold mb-2">Lloyd Slade</h3>
               <p className="text-lg font-semibold mb-2">CEO / CMO</p>
@@ -167,7 +167,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-purple-500 rounded-3xl p-8 shadow-lg"
+              className="bg-purple-500 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
               <h3 className="text-2xl font-bold mb-2 text-white">Anna Maria Pistika</h3>
               <p className="text-lg font-semibold mb-2 text-white">Casino Operations Director</p>
@@ -180,7 +180,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-purple-500 rounded-3xl p-8 shadow-lg"
+              className="bg-purple-500 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
               <h3 className="text-2xl font-bold mb-2 text-white">Emma Slade</h3>
               <p className="text-lg font-semibold mb-2 text-white">Projects Director</p>
@@ -193,7 +193,7 @@ export default function Contact() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-cyan-400 rounded-3xl p-8 shadow-lg"
+              className="bg-cyan-400 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
               <h3 className="text-2xl font-bold mb-2">Stavros Dafnomilis</h3>
               <p className="text-lg font-semibold mb-2">Director of Casino Management</p>

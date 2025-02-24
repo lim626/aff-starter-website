@@ -101,7 +101,7 @@ export default function Home() {
           // }}
         >
           <div
-            className="flex flex-col items-center  py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+            className="flex flex-col items-center hover:animate-scale  py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
             style={{
               backgroundImage: "url('/img/pricing/pricing1.png')",
               backgroundSize: "100% 100%",
@@ -133,7 +133,7 @@ export default function Home() {
           </div>
 
           <div
-            className="flex flex-col items-center   py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+            className="flex flex-col items-center hover:animate-scale  py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
             style={{
               backgroundImage: "url('/img/pricing/pricing2.png')",
               backgroundSize: "100% 100%",
@@ -162,7 +162,7 @@ export default function Home() {
           </div>
 
           <div
-            className="flex flex-col items-center  py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+            className="flex flex-col items-center hover:animate-scale py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
             style={{
               backgroundImage: "url('/img/pricing/pricing1.png')",
               backgroundSize: "100% 100%",
@@ -192,7 +192,7 @@ export default function Home() {
           </div>
 
           <div
-            className="flex flex-col items-center   py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+            className="flex flex-col items-center  hover:animate-scale py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
             style={{
               backgroundImage: "url('/img/pricing/pricing2.png')",
               backgroundSize: "100% 100%",
@@ -388,7 +388,7 @@ export default function Home() {
             className="md:grid hidden grid-cols-4 gap-4 w-full mt-24 "
           >
             <div
-              className="flex flex-col items-center  py-[50px] px-[20px] min-h-[500px] bg-cover bg-center bg-no-repeat relative"
+              className="flex flex-col items-center hover:animate-scale py-[50px] px-[20px] min-h-[500px] bg-cover bg-center bg-no-repeat relative"
               style={{
                 backgroundImage: "url('/img/pricing/pricing1.png')",
                 backgroundSize: "100% 100%",
@@ -420,7 +420,7 @@ export default function Home() {
             </div>
 
             <div
-              className="flex flex-col items-center min-h-[500px]  py-[30px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+              className="flex flex-col items-center min-h-[500px] hover:animate-scale py-[30px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
               style={{
                 backgroundImage: "url('/img/pricing/pricing2.png')",
                 backgroundSize: "100% 100%",
@@ -452,7 +452,7 @@ export default function Home() {
             </div>
 
             <div
-              className="flex flex-col items-center min-h-[500px] py-[50px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+              className="flex flex-col items-center min-h-[500px] py-[50px] px-[20px] hover:animate-scale bg-cover bg-center bg-no-repeat relative"
               style={{
                 backgroundImage: "url('/img/pricing/pricing1.png')",
                 backgroundSize: "100% 100%",
@@ -488,7 +488,7 @@ export default function Home() {
 
 
             <div
-              className="flex flex-col items-center min-h-[500px]  py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
+              className="flex flex-col items-center min-h-[500px] hover:animate-scale py-[60px] px-[20px]  bg-cover bg-center bg-no-repeat relative"
               style={{
                 backgroundImage: "url('/img/pricing/pricing2.png')",
                 backgroundSize: "100% 100%",
@@ -623,11 +623,11 @@ export default function Home() {
               sizes="50vw"
             />
           </div>
-        <p className="md:text-6xl text-3xl  font-bold text-black md:mt-10">
+        <p className="md:text-6xl text-3xl hover:animate-scale font-bold text-black md:mt-10">
           Why choose Aff-Starter?
         </p>
         <div className="flex  w-[80%] md:mt-10 justify-center md:pt-10">
-          <div className="w-[50%] md:block hidden">
+          <div className="w-[50%] md:block hidden hover:animate-scale">
             <Image
               src="/img/pricing/av.png"
               alt="Aff-Starter advantages illustration"

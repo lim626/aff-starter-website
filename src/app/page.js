@@ -80,7 +80,7 @@ export default function Home() {
       <div className="flex w-full relative">
         <img
           src="./img/ring.png"
-          className="absolute mt-[6vw] ml-[7vw] hidden lg:block"
+          className="absolute mt-[6vw] ml-[7vw] hidden lg:block hover:animate-scale"
           width={100}
           style={{
             zIndex: 1,
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
             <div className="flex lg:justify-start justify-center">
               <Button className="bg-[#F25411] flex lg:text-xl text-[22px] items-center rounded-[30px] mt-10">
-              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Get Started</a>
+              <a href="/contact">Get Started</a>
                 <img
                   src="./img/icon_start.png"
                   className="ml-2 hidden lg:block"></img>
@@ -138,26 +138,33 @@ export default function Home() {
           </div>
 
           <div className="mt-16 flex hidden lg:flex gap-4 lg:text-2xl text-[22px] items-center">
-            <img 
-              src="./img/mark2.png" 
-              className="w-[100px] h-[40px] object-contain cursor-pointer" 
-              onClick={scrollToConsultancy}
-            />
-            <img 
-              src="./img/mark5.jpg" 
-              className="w-[100px] h-[40px] object-contain cursor-pointer"
-              onClick={scrollToConsultancy}
-            />
-            <img 
-              src="./img/mark6.jpg" 
-              className="w-[100px] h-[40px] object-contain cursor-pointer"
-              onClick={scrollToConsultancy}
-            />
-            <img 
-              src="./img/mark7.jpg" 
-              className="w-[100px] h-[40px] object-contain cursor-pointer"
-              onClick={scrollToConsultancy}
-            />
+            <a href="https://wasino.com/en" target="_blank">
+              <img 
+                src="./img/mark2.png" 
+                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale" 
+              />
+            </a>
+            <a href="https://www.playfrank.com/" target="_blank">
+              <img 
+                src="./img/mark5.jpg" 
+                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                onClick={scrollToConsultancy}
+              />
+            </a>
+            <a href="https://www.luckywhalecasino.com/" target="_blank">
+              <img 
+                src="./img/mark6.jpg" 
+                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                onClick={scrollToConsultancy}
+              />
+            </a>
+            <a href="https://www.betterwin.com/" target="_blank">
+              <img 
+                src="./img/mark7.jpg" 
+                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                onClick={scrollToConsultancy}
+              />
+            </a>
           </div>
         </div>
         <div
@@ -178,7 +185,7 @@ export default function Home() {
       </div>
       <div className="relative mt-4 w-[]" style={{ zIndex: 10 }}>
         <div
-          className="absolute w-[25vw] top-[600px] hidden lg:block left-24"
+          className="absolute w-[25vw] top-[600px] hidden lg:block left-24 hover:animate-scale"
           style={{ zIndex: 0 }}>
           <img src="./img/image 2.png"></img>
         </div>
@@ -328,7 +335,7 @@ export default function Home() {
           <div className="mt-4 flex lg:block justify-center">
             <img
               src="./img/logo-quest.png"
-              className="lg:w-[35vw] w-[60vw]"></img>
+              className="lg:w-[35vw] w-[60vw] hover:animate-scale"></img>
           </div>
           <div className="mt-8 lg:flex">
             <div>
@@ -350,7 +357,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:px-8 mt-8 lg:mt-0">
+            <div className="lg:px-8 mt-8 lg:mt-0 hover:animate-scale">
               <img src="./img/jorney-track 1.png"></img>
             </div>
           </div>
@@ -384,7 +391,7 @@ export default function Home() {
           <div>
             <img
               src="./img/affliu-soon.png"
-              className="md:w-[50vw] lg:mt-72 mt-48"></img>
+              className="md:w-[50vw] lg:mt-72 mt-48 hover:animate-scale"></img>
           </div>
           <div className="lg:w-[30vw] text-white text-center mt-12">
             <p className="lg:text-[3.5vw] text-[24px] font-bold lg:flex text-[#6DE0F6]  lg:flex-col leading-tight">
@@ -439,11 +446,11 @@ export default function Home() {
               your iGaming brand
             </p>
           </span>
-          <div className="my-16" style={{ zIndex: 1 }}>
+          <div className="my-16 hover:animate-scale" style={{ zIndex: 1 }}>
             <img src="./img/unlock.png"></img>
           </div>
           <div className="md:flex " style={{ zIndex: 1 }}>
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 bg-white mb-8 md:mb-0">
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border hover:animate-scale border-[4px] border-black md:py-12 py-4 bg-white mb-8 md:mb-0">
               <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
                 CUSTOM SOLUTIONS
               </span>
@@ -452,7 +459,7 @@ export default function Home() {
                 designed for the unique demands of the iGaming industry.
               </p>
             </div>
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white mb-8 md:mb-0">
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left hover:animate-scale rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white mb-8 md:mb-0">
               <span className="md:text-[2.5vw] text-[25px] font-bold flex text-black flex flex-col leading-tight">
                 Technologies
               </span>
@@ -463,7 +470,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white  md:mb-0">
+            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left hover:animate-scale rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white  md:mb-0">
               <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
                 Blockchain & AI
               </span>
@@ -546,7 +553,7 @@ export default function Home() {
               Don&apos;t take our word for it—see how we&apos;ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
-            <div className="hidden md:block">
+            <div className="hidden md:block hover:animate-scale">
               <img src="./img/say.png"></img>
             </div>
             <div className="w-[85vw] px-4 py-4 mt-8 block md:hidden">
@@ -566,7 +573,7 @@ export default function Home() {
               >
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-4 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/Luckywhale-icon.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-2">
                       <p className="font-bold text-gray-200 text-[12px]">LuckyWhale:</p>
                       <p className="text-[10px] text-gray-200 my-2">
@@ -579,7 +586,7 @@ export default function Home() {
 
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col bg-[#7F07EF] items-center px-2 py-2 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/BetterWin-Icon.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-2">
                       <p className="font-bold text-gray-200 text-[12px]">Betterwin</p>
                       <p className="text-[10px] text-gray-200 my-2">
@@ -592,7 +599,7 @@ export default function Home() {
 
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/play-frank-Icon.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Playfrank</p>
                       <p className="text-[10px] text-gray-200 my-4">
@@ -605,7 +612,7 @@ export default function Home() {
 
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/Quickspinns-Icons.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Quickspinner</p>
                       <p className="text-[10px] text-gray-200 my-4">
@@ -618,7 +625,7 @@ export default function Home() {
 
                 <SwiperSlide className="!w-[250px]" >
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/Wasino-icon.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Wasino</p>
                       <p className="text-[10px] text-gray-200 my-4">
@@ -631,7 +638,7 @@ export default function Home() {
 
                 <SwiperSlide className="!w-[250px]">
                   <div className="flex flex-col bg-[#7F07EF] items-center px-4 py-8 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={80} alt="avatar"></img>
+                    <img src="./img/Loothoot-icon.png" width={80} alt="avatar"></img>
                     <div className="px-4 mt-4">
                       <p className="font-bold text-gray-200 text-[12px]">Loothoot</p>
                       <p className="text-[10px] text-gray-200 my-4">
@@ -699,7 +706,7 @@ export default function Home() {
               >
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/Luckywhale-icon.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">LuckyWhale</p>
                       <p className=" text-[16px] text-gray-200 my-4">
@@ -712,7 +719,7 @@ export default function Home() {
 
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-4 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/BetterWin-Icon.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">Betterwin</p>
                       <p className=" text-[16px] text-gray-200 my-4">
@@ -725,7 +732,7 @@ export default function Home() {
 
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/play-frank-Icon.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">Playfrank</p>
                       <p className=" text-[18px] text-gray-200 my-4">
@@ -737,7 +744,7 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/Quickspinns-Icons.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">Quickspinner</p>
                       <p className=" text-[18px] text-gray-200 my-4">
@@ -749,7 +756,7 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/Wasino-icon.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">Wasino</p>
                       <p className=" text-[18px] text-gray-200 my-4">
@@ -762,7 +769,7 @@ export default function Home() {
 
                 <SwiperSlide>
                   <div className="flex bg-[#7F07EF] items-center px-4 py-12 rounded-xl border-4 border-white shadow-2xl shadow-purple-900/80">
-                    <img src="./img/avarta.png" width={100} alt="avatar"></img>
+                    <img src="./img/Loothoot-icon.png" width={100} alt="avatar"></img>
                     <div className="ml-8">
                       <p className="font-bold text-gray-200 text-[26px]">Loothoot</p>
                       <p className=" text-[18px] text-gray-200 my-4">
