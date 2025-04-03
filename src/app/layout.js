@@ -14,6 +14,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.ZOHOIM=window.ZOHOIM||function(a,b){ZOHOIM[a]=b;};
+              window.ZOHOIM.prefilledMessage="Please\x20Submit\x20a\x20ticket";
+              (function(){
+                var d=document;
+                var s=d.createElement('script');
+                s.type='text/javascript';
+                s.nonce='{place_your_nonce_value_here}';
+                s.defer=true;
+                s.src="https://im.zoho.com/api/v1/public/channel/32339c135b10516cac2adf7bf44aa7b6/widget";
+                d.getElementsByTagName('head')[0].appendChild(s);
+              })();
+            `,
+          }}
+        />
+      </head>
       <body>
         <StoreProvider>
           <ToastContainer />
