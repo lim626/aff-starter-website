@@ -100,6 +100,11 @@ export default function Header() {
               Pricing
             </a>
             <a
+              href="/simulation"
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              Simulation Tool
+            </a>
+            <a
               href="/contact"
               className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
               Contact Us
@@ -166,6 +171,9 @@ export default function Header() {
             </MenuItem> */}
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
               <a href="/pricing">Pricing</a>
+            </MenuItem>
+            <MenuItem className="hover:bg-[#0C0834] hover:text-white">
+              <a href="/simulation">Simulation Tool</a>
             </MenuItem>
             <MenuItem className="hover:bg-[#0C0834] hover:text-white">
              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46">Schedule a call</a> 
