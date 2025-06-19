@@ -158,9 +158,13 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold mb-2">Lloyd Slade</h3>
               <p className="text-lg font-semibold mb-2">CEO / CMO</p>
-              <a href="mailto:lloyd@aff-starter.com" className="text-blue-900 hover:text-blue-700 font-bold font-['regular']">
-                lloyd@aff-starter.com
+              <a href="mailto:lloyd@aff-starter.com" className="text-blue-900 block hover:text-blue-700 font-bold font-['regular']">
+                Email: lloyd@aff-starter.com
               </a>
+              <a href="https://t.me/AffStarter"  target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-700 font-bold font-['regular']">
+                Telegram: @AffStarter
+              </a>
+              
             </motion.div>
 
             <motion.div
@@ -169,10 +173,13 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-purple-500 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
-              <h3 className="text-2xl font-bold mb-2 text-white">Anna Maria Pistika</h3>
-              <p className="text-lg font-semibold mb-2 text-white">Casino Operations Director</p>
-              <a href="mailto:anna@aff-starter.com" className="text-blue-100 hover:text-blue-200 font-['regular']">
-                anna@aff-starter.com
+              <h3 className="text-2xl font-bold mb-2 text-white">Edmond Gevorgyan</h3>
+              <p className="text-lg font-semibold mb-2 text-white">Director of Affiliation</p>
+              <a href="mailto:edmond@aff-starter.com" className="text-blue-100 block hover:text-blue-200 font-['regular']">
+                Email: edmond@aff-starter.com
+              </a>
+              <a href="https://t.me/igaming2004"  target="_blank" rel="noopener noreferrer" className="text-blue-100 hover:text-blue-200 font-['regular']">
+                Telegram: @igaming2004
               </a>
             </motion.div>
 
@@ -185,7 +192,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold mb-2 text-white">Emma Slade</h3>
               <p className="text-lg font-semibold mb-2 text-white">Projects Director</p>
               <a href="mailto:emma@aff-starter.com" className="text-blue-100 hover:text-blue-200 font-['regular']">
-                emma@aff-starter.com
+                Email: emma@aff-starter.com
               </a>
             </motion.div>
 
@@ -195,10 +202,13 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="bg-cyan-400 rounded-3xl p-8 shadow-lg hover:animate-scale"
             >
-              <h3 className="text-2xl font-bold mb-2">Stavros Dafnomilis</h3>
-              <p className="text-lg font-semibold mb-2">Director of Casino Management</p>
-              <a href="mailto:stavros@aff-starter.com" className="text-blue-900 hover:text-blue-700 font-['regular']">
-                stavros@aff-starter.com
+              <h3 className="text-2xl font-bold mb-2">Lim Kim San</h3>
+              <p className="text-lg font-semibold mb-2">Chief Technology Officer</p>
+              <a href="mailto:lim@aff-starter.com" className="text-blue-900 block hover:text-blue-700 font-['regular']">
+                Email: lim@aff-starter.com
+              </a>
+              <a href="https://t.me/Indefatigable626"  target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-700 font-['regular']">
+                Telegram: @Indefatigable626
               </a>
             </motion.div>
           </div>
