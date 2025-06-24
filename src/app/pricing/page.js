@@ -91,7 +91,7 @@ export default function Home() {
           high-quality traffic and conversions. Choose from flexible plans to
           match your business size and goals:
         </p>
-        <div
+        {/* <div
           className="md:grid hidden grid-cols-4 gap-4 w-full mt-10"
           // style={{
           //   backgroundImage: "url('/img/pricing/affiliate.png')",
@@ -224,9 +224,9 @@ export default function Home() {
               <span className="text-[14px]">p/m</span>
             </span>
           </div>
-        </div>
+        </div> */}
 
-        <Swiper
+        {/* <Swiper
           effect={'cards'}
           grabCursor={true}
           modules={[EffectCards]}
@@ -364,7 +364,7 @@ export default function Home() {
               </span>
             </div>
           </SwiperSlide>
-        </Swiper>
+        </Swiper> */}
       </div>
 
       
@@ -384,7 +384,7 @@ export default function Home() {
             solutions:arent pricing structure ensures you only pay for what you
             need.
           </p>
-          <div
+          {/* <div
             className="md:grid hidden grid-cols-4 gap-4 w-full mt-24 "
           >
             <div
@@ -521,9 +521,9 @@ export default function Home() {
               </p>
             </div>
 
-          </div>
+          </div> */}
 
-        <div className="md:hidden mt-8 px-4 w-full flex justify-center items-center">
+        {/* <div className="md:hidden mt-8 px-4 w-full flex justify-center items-center">
 
           <Swiper
             effect={'cards'}
@@ -607,7 +607,7 @@ export default function Home() {
             ))}
           </Swiper>
 
-        </div>
+        </div> */}
 
         </div>
       </div>
