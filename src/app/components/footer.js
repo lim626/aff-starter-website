@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="text-white flex flex-col">
           <p className="font-semibold text-2xl">CONTACT WITH US</p>
           <p className="mt-8">
-            Eleate Your Journey with Aff-Starter! Schedule a FREE Consultation
+            Elevate Your Journey with Aff-Starter! Schedule a FREE Consultation
             and Discovery Session Today!
           </p>
           <a 
