@@ -60,7 +60,7 @@ export default function Header() {
       <div
         className={`flex w-full ${
           isVisible ? "lg:h-[110px] h-[60px]" : "h-[60px]"
-        }  px-8 justify-between items-center  bg-[#0C0834]`}>
+        }  px-8 justify-between items-center  bg-[#7338B8]`}>
         <img
           src="./img/logo.png"
           width="120"
@@ -72,7 +72,7 @@ export default function Header() {
           <nav class=" text-[1.3vw] flex items-center text-white">
             <a
               href="/"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
               Home
             </a>
             {/* {pathname === "/" && (
@@ -84,7 +84,7 @@ export default function Header() {
             )} */}
             <a
               href="/service"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
               Managed Services
             </a>
             {/* {pathname === "/" && (
@@ -96,17 +96,17 @@ export default function Header() {
             )} */}
             <a
               href="/pricing"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
               Pricing
             </a>
             <a
               href="/simulation"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
               Simulation Tool
             </a>
             <a
               href="/contact"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
               Contact Us
             </a>
           </nav>

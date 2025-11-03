@@ -96,7 +96,7 @@ export default function Home() {
               className="flex flex-col items-center md:w-[65%] w-[85%] mt-[3vw] text-[24px]  md:text-5xl xxl:text-6xl">
               <p class=" text-white font-bold ">Affiliate Managed Services</p>
 
-              <p className="text-white xxl:text-3xl md:text-2xl text-[12px] md:mt-12 mt-4 text-center">
+              <p className="text-white xxl:text-3xl md:text-2xl text-[12px] md:mt-12 mt-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Build powerful partnerships that drive growth with Aff-Starter&apos;s
                 comprehensive Affiliate Management services. From targeted
                 recruitment to ongoing optimization, we manage every step of the
@@ -118,7 +118,7 @@ export default function Home() {
                   style={{
                     zIndex: 1,
                   }}></img>
-                <p className="text-[20px] text-center">
+                <p className="text-[20px] text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Start strong with a seamless onboarding experience. We provide
                   new affiliates with all the tools, resources, and guidance
                   they need to succeed from day one, setting the stage for
@@ -136,7 +136,7 @@ export default function Home() {
                   style={{
                     zIndex: 1,
                   }}></img>
-                <p className="text-[20px] text-center">
+                <p className="text-[20px] text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Stay connected and supported. Our dedicated account managers
                   maintain day-to-day contact with affiliates, ensuring they
                   have everything needed to perform at their best while
@@ -154,7 +154,7 @@ export default function Home() {
                   style={{
                     zIndex: 1,
                   }}></img>
-                <p className="text-[20px] text-center">
+                <p className="text-[20px] text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Boost engagement with localized content. We offer strategic
                   advice on adapting your brand&apos;s messaging and promotions to
                   resonate with local audiences, helping you drive conversions
@@ -172,7 +172,7 @@ export default function Home() {
                   style={{
                     zIndex: 1,
                   }}></img>
-                <p className="text-[20px] text-center">
+                <p className="text-[20px] text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Stay connected and supported. Our dedicated account managers
                   maintain day-to-day contact with affiliates, ensuring they
                   have everything needed to perform at their best while
@@ -204,11 +204,7 @@ export default function Home() {
         <p className=" md:text-[3vw] text-[25px] font-bold text-black">
           affiliate partnerships?
         </p>
-        <div className="flex w-full justify-center items-center pb-8">
-          <Button className="bg-[#6D12D8] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
-          <a href="/contact">Contact US</a>
-          </Button>
-        </div>
+        
       </div>
 
       {/* <div className="">
@@ -292,26 +288,13 @@ export default function Home() {
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}>
-        <div className=" flex items-center justify-center mt-4 md:w-[50vw] hover:animate-scale w-[50vw]">
-          <img className="" src="./img/rewards.png"></img>
+        <div className=" flex items-center justify-center mt-4 md:w-[50vw]  w-[50vw] hidden md:block">
+          <img className="" src="./img/rewards.gif"></img>
         </div>
-        <div className="flex flex-col items-center md:w-[35vw] w-[90vw] justify-center mt-8">
-          <p className=" md:text-[3vw] text-[25px] font-bold text-[#70E8FC] leading-none">
-            Ready to build a
-          </p>
-          <p className=" md:text-[3vw] text-[25px] font-bold text-black">
-            loyal player base?
-          </p>
-          <p className="text-center mt-8 md:text-[20px]">
-            Explore how Aff-Starter&apos;s Retention Management services can enhance
-            player loyalty and boost your brand&apos;s long-term success. Contact us
-            today to learn more.
-          </p>
-          <div className="flex w-full justify-center items-center md:pb-8 pb-12">
-            <Button className="bg-[#6D12D8] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
-            <a href="/contact">Contact US</a>
-            </Button>
-          </div>
+        <div className=" mb-16 mt-0 pt-0">
+          <Button className="bg-[#6D12D8] flex text-xl lg:text-3xl px-8 items-center rounded-[30px] mt-10  normal-case">
+          <a href="/contact">Contact US</a>
+          </Button>
         </div>
       </div>
 
@@ -326,7 +309,7 @@ export default function Home() {
         <p className="font-bold md:text-5xl text-[40px] text-center md:text-left lg:mt-12 ">
           Social Media Managed Services
         </p>
-        <p className="md:w-[50vw] w-[80vw] text-center mt-8 md:text-2xl ">
+        <p className="md:w-[50vw] w-[80vw] text-center mt-8 md:text-2xl " style={{ fontFamily: 'Poppins, sans-serif' }}>
           Take your brand to the next level with Aff-Starter&apos;s Social Media
           Managed Services. Combined with our QuestTracker gamification
           platform, we turn social media into a powerful tool for engagement,
@@ -441,38 +424,38 @@ export default function Home() {
               <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12 gap-2 items-center justify-center mx-[10%]">
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Discord Community Management</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         Create a vibrant community on Discord with our management services. We set up, manage, and nurture your Discord server to foster engagement, organize events, and ensure a dynamic interaction space that reflects your brand&apos;s values and connects deeply with users.
                       </p>
                 </div>
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Influencer Collaboration</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Connect with the perfect influencers to amplify your brand. We manage all aspects of influencer partnerships, from selection to campaign execution, ensuring influencers align with your brand values and reach your target demographics effectively.
                       </p>
                 </div>
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Monthly Performance Reports</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       See the bigger picture with clear, act  ionable i   nsights. Each month, we provide a detailed report on engagement, reach, and campaign performance, giving you a comprehensive view of your brand&apos;s social media impact.
                       </p>
                 </div>
 
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Community Management</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Keep your followers engaged and loyal. Our team actively respond to comments  , messages, and feedback, buildi ng trust and a positive brand image that players want to be part of.
                       </p>
                 </div>
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Content Creation &amp; Strategy</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         Make your brand unforgettable with standout content. We develop a unique content strategy that reflects your brand&apos;s personality, crafting posts that entertain, inform, and spark conversations across all major platforms.
                       </p>
                 </div>
                 <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
                    <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Real-Time Engagement Monitoring</p>
-                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text">
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text" style={{ fontFamily: 'Poppins, sans-serif' }}>
                       Stay a head with real-time insights. Our team continuously monitors engagement metrics and social trends, allowing us to adjust strategies quickly to maximize impact.
                       </p>
                 </div>
@@ -495,7 +478,7 @@ export default function Home() {
         <p className="md:text-[3vw] text-[30px] font-bold  text-black  leading-tight">
           <span className="text-[#70E8FC]">Some work We&apos;ve Done</span>
         </p>
-        <p className=" md:text-2xl text-center mt-8 md:px-[20%] px-[20px]">
+        <p className=" md:text-2xl text-center mt-8 md:px-[20%] px-[20px]" style={{ fontFamily: 'Poppins, sans-serif' }}>
         From emerging brands to established players, we&apos;ve helped clients turn performance goals into measurable growth. Our team has executed influencer campaigns, paid media strategies, and affiliate partnerships that deliver real conversions , not vanity metrics. Every project reflects our core focus &#58; data-driven marketing that scales reach, sharpens ROI, and drives sustainable acquisition.
         </p>
         <div className="mt-8 flex md:flex-row flex-col gap-4 w-full md:px-[20%] px-[5%] md:mb-16">

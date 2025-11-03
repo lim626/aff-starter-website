@@ -406,17 +406,12 @@ export default function Home() {
           style={{
             backgroundImage: "url('./img/bg/bg-6-footer.png')",
             backgroundSize: "cover",
-            backgroundPosition: "left",
+            backgroundPosition: "right",
             backgroundRepeat: "no-repeat",
           }}></div>
         <div
           className=" grid md:grid-cols-2   py-16"
-          style={{
-            backgroundImage: "url('./img/bg-say.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}>
+          >
           <div className="flex flex-col md:pl-[15vw]  items-center justify-center  md:px-0 ">
             <span className="md:text-[2.3vw] text-[23px] font-bold flex">
               WHAT OUR
@@ -429,18 +424,10 @@ export default function Home() {
               Don&apos;t take our word for it—see how we&apos;ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
-            <div className="hidden md:block">
-            <video 
-              className="rounded-b-[40px] w-[500px] h-[500px]"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              <source src="/img/say.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="hidden md:block px-4">
+            
+              <img src="./img/say.gif" />
+            
             </div>
             <div className="w-[85vw] px-4 py-4 mt-8 block md:hidden">
               <Swiper

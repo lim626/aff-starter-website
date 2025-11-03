@@ -28,7 +28,7 @@ dialog {
 }
 
 :root {
-  font-family: 'Bobby Jones Soft', system-ui, sans-serif;
+  font-family: 'Bobby Jones Soft', system-ui, sans-serif, Poppins, sans-serif;
 }
 
 /* Add SVG text font styling */
