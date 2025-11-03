@@ -325,8 +325,8 @@ export default function Home() {
           </div>
           <div className="mt-4 flex lg:block justify-center">
             <img
-              src="./img/logo-quest.png"
-              className="lg:w-[35vw] w-[60vw] hover:animate-scale"></img>
+              src="./img/Questracker.svg"
+              className="lg:w-[30vw] w-[58vw] hover:animate-scale"></img>
           </div>
           <div className="mt-8 lg:flex">
             <div>
@@ -363,7 +363,7 @@ export default function Home() {
 
 
         <div id="consultancy"
-          className="consultancy relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
+          className="relative consultancy relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
           style={{
             // backgroundImage: "url('./img/bg/bg-6.png')",
             backgroundSize: "cover",
@@ -373,7 +373,7 @@ export default function Home() {
           }}>
           <div >
             {" "}
-            <div className="md:w-[37vw] px-8 rounded-[20px]  md:mt-12 mt-4 md:py-12 py-4 flex flex-col text-center md:text-left items-center md:items-left">
+            <div className=" md:w-[37vw] px-8 rounded-[20px]  md:mt-12 mt-4 md:py-12 py-4 flex flex-col text-center md:text-left items-center md:items-left">
               <span className="md:text-[3vw] text-[20px]  md:text-left font-bold flex-col text-white  leading-tight">
                 Expert Consultancy Tailored for
                 <span className=" font-bold leading-none text-[#6DE0F6]">
@@ -387,11 +387,12 @@ export default function Home() {
                 services, ranging from payment solutions to legal setup, helping
                 you navigate complex regulatory landscapes.
               </p>
-
-              <div className="md:hidden mt-4">
-                <img src="./img/bg/bg-6-2.png" className=""></img>
+              <div className="md:absolute bottom-[10%] right-[0%] md:w-[40%]">
+                <img src="./img/bg/bg-6-2.gif" className=""></img>
               </div>
+              
             </div>
+            
             <div className="px-8 flex justify-center">
               {" "}
               <Button className="bg-[#F25411] flex text-xl py-3 md:px-8 px-4 text-[15px] md:text-[22px] items-center rounded-[35px] md:mt-10 normal-case">
@@ -428,8 +429,18 @@ export default function Home() {
               Don&apos;t take our word for it—see how we&apos;ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
-            <div className="hidden md:block hover:animate-scale">
-              <img src="./img/say.png"></img>
+            <div className="hidden md:block">
+            <video 
+              className="rounded-b-[40px] w-[500px] h-[500px]"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src="/img/say.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             </div>
             <div className="w-[85vw] px-4 py-4 mt-8 block md:hidden">
               <Swiper

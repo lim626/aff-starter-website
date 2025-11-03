@@ -517,9 +517,11 @@ export default function Home() {
                 src="./img/work/1.mp4" 
                 controls 
                 className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
                 preload="metadata"
-                autoPlay={true}
-                loop={true}
               >
                 Your browser does not support the video tag.
               </video>
@@ -531,9 +533,11 @@ export default function Home() {
               src="./img/work/3.mp4" 
               controls 
               className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
               preload="metadata"
-              autoPlay={1}
-              loop={true}
             >
               Your browser does not support the video tag.
             </video>
@@ -551,9 +555,11 @@ export default function Home() {
               src="./img/work/2.mp4" 
               controls 
               className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
               preload="metadata"
-              autoPlay={true}
-              loop={true}
             >
               Your browser does not support the video tag.
             </video>
