@@ -100,7 +100,7 @@ export default function Footer() {
           and Discovery Session Today!
         </span>
         <p className=" text-[18px] text-white mt-4">+35679081137</p>
-        <p className=" text-[18px] text-white mt-4">lloyd&#64;aff-starter.com</p>
+        <p className=" text-[18px] text-white mt-4">lloyd@aff-starter.com</p>
       </div>
     </div>
   );
