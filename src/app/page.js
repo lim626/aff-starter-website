@@ -138,33 +138,61 @@ export default function Home() {
           </div>
 
           <div className="mt-16 flex hidden lg:flex gap-4 lg:text-2xl text-[22px] items-center">
-            <a href="https://wasino.com/en" target="_blank">
               <img 
-                src="./img/mark2.png" 
-                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale" 
+                src="./img/mark1-1.png" 
+                className="w-[120px] h-[40px] object-contain cursor-pointer hover:animate-scale" 
               />
-            </a>
-            <a href="https://www.playfrank.com/" target="_blank">
               <img 
-                src="./img/mark5.jpg" 
-                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
-                onClick={scrollToConsultancy}
+                src="./img/mark1-2.png" 
+                className="w-[120px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
               />
-            </a>
-            <a href="https://www.luckywhalecasino.com/" target="_blank">
+       
+ 
               <img 
-                src="./img/mark6.jpg" 
-                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
-                onClick={scrollToConsultancy}
+                src="./img/mark1-3.png" 
+                className="w-[130px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
               />
-            </a>
-            <a href="https://www.betterwin.com/" target="_blank">
+
               <img 
-                src="./img/mark7.jpg" 
-                className="w-[100px] h-[40px] object-contain cursor-pointer hover:animate-scale"
-                onClick={scrollToConsultancy}
+                src="./img/mark1-4.png" 
+                className="w-[130px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
               />
-            </a>
+              
+              <img 
+                src="./img/mark1-5.png" 
+                className="w-[70px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
+              />
+              
+              <img 
+                src="./img/mark1-6.png" 
+                className="w-[60px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
+              />
+          </div>
+          <div className=" flex hidden lg:flex gap-4 lg:text-2xl text-[22px] items-center">
+              <img 
+                src="./img/mark2-1.png" 
+                className="w-[120px] h-[40px] object-contain cursor-pointer hover:animate-scale" 
+              />
+              <img 
+                src="./img/mark2-2.png" 
+                className="w-[120px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
+              />
+              <img 
+                src="./img/mark2-3.png" 
+                className="w-[250px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
+              />
+              <img 
+                src="./img/mark2-4.png" 
+                className="w-[140px] h-[40px] object-contain cursor-pointer hover:animate-scale"
+                // onClick={scrollToConsultancy}
+              />
           </div>
         </div>
         <div
@@ -178,14 +206,17 @@ export default function Home() {
           <div className="w-[300px] floating-image absolute right-0 top-[150px]">
             <img src="./img/animation/1.png"></img>
           </div>
-          <div className="w-[400px] floating-image1 absolute right-12 top-[200px]">
+          <div className="w-[380px] floating-image1 absolute right-[13%] top-[140px]">
             <img src="./img/animation/2.png"></img>
+          </div>
+          <div className="floating-image1 absolute right-0 top-[130px]">
+            <img className="w-[130px]" src="./img/animation/3.png"></img>
           </div>
         </div>
       </div>
       <div className="relative mt-4 w-[]" style={{ zIndex: 10 }}>
         <div
-          className="absolute w-[25vw] top-[600px] hidden lg:block left-24 hover:animate-scale"
+          className="absolute w-[40vw] top-[400px] hidden lg:block left-[8%] "
           style={{ zIndex: 0 }}>
           <img src="./img/image 2.png"></img>
         </div>
@@ -213,7 +244,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="lg:flex grid place-items-center  lg:justify-end justify-center ">
+          <div className="lg:flex grid place-items-top  lg:justify-end justify-center ">
             <div
               style={{
                 // backgroundImage: "url('./img/archieve.png')",
@@ -221,13 +252,13 @@ export default function Home() {
                 backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
-              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+              className="relative card lg:h-[35vw] lg:w-[27vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[6vw] lg:w-[13vw] flex items-center justify-center">
                 <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
                   AFFILIATE MANAGEMENT
                 </p>
               </div>
-              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8  flex justify-center items-center">
+              <div className="lg:absolute lg:left-[3vw] lg:top-[11vw] lg:w-[12vw] lg:px-0 lg:mt-4 mt-4 px-8  flex justify-center items-center">
                 <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   Drive high-quality traffic and optimize conversions.
                 </p>
@@ -240,63 +271,23 @@ export default function Home() {
                 backgroundPosition: "top",
                 backgroundRepeat: "no-repeat",
               }}
-              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
-              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
-                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
-                  Retention Management
-                </p>
-              </div>
-              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
-                <p className=" font-normal lg:text-[1.5vw] text-[16px]">
-                  Enhance player retention and loyalty with personalized CRM
-                  strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="lg:flex grid place-items-center  lg:justify-end justify-center ">
-            <div
-              style={{
-                // backgroundImage: "url('./img/archieve.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "top",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
-              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
+              className="relative card1 lg:h-[25vw] lg:mt-10 lg:w-[20vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
+              <div className="lg:absolute  lg:left-[4vw] lg:top-[4vw] lg:w-[16vw] flex items-center justify-center">
                 <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
                   Social Media Management
                 </p>
               </div>
-              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
+              <div className="lg:absolute  lg:left-[4vw] lg:top-[10vw] lg:w-[14vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
                 <p className=" font-normal lg:text-[1.5vw] text-[18px]">
                   Boost visibility and engagement with targeted social
                   campaigns.
                 </p>
               </div>
             </div>
-            <div
-              style={{
-                // backgroundImage: "url('./img/archieve.png')",
-                backgroundSize: "contain",
-                backgroundPosition: "top",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="relative card lg:h-[25vw] lg:w-[25vw] w-[75vw] h-[250px] transition-transform duration-300 transform hover:animate-scale">
-              <div className="lg:absolute lg:left-[3vw] lg:top-[4vw] lg:w-[13vw] flex items-center justify-center">
-                <p className=" font-bold lg:text-[1.5vw] text-[20px] flex lg:mt-0 mt-12">
-                  Customer Service
-                </p>
-              </div>
-              <div className="lg:absolute lg:left-[3vw] lg:top-[9vw] lg:w-[12vw] lg:px-0 lg:mt-0 mt-8 px-8 flex justify-center items-center">
-                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
-                  24/7 multilingual support for your players.
-                </p>
-              </div>
-            </div>
           </div>
+          
 
-          <div className="flex w-full justify-center items-center lg:mt-28 pb-8">
+          <div className="flex w-full justify-center items-center lg:mt-20 pb-8">
             <Button className="bg-[#F25411] flex text-xl px-8 items-center justify-center rounded-[30px] lg:mt-10  normal-case" >
               <a href="/service">{buttonText}</a>
             </Button>
@@ -341,7 +332,7 @@ export default function Home() {
             <div>
               {" "}
               <div className="lg:w-[25vw] px-8 rounded-[20px] border border-[4px] border-black lg:py-16 py-8 bg-white">
-                <p className="lg:text-[3vw] text-[22px] font-bold  text-[#6DE0F6] text-center lg:flex lg:flex-col leading-tight">
+                <p className="lg:text-[3vw] text-[22px] font-bold  text-[#6D12D8] text-center lg:flex lg:flex-col leading-tight">
                   Gamification 
                   <span className="text-black font-bold leading-none">
                     {" "}
@@ -369,123 +360,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className="affilu flex flex-col bg-[#6D09DD] items-end px-[10%] xxl:px-[15%] relative"
-          style={{
-            // backgroundImage: "url('./img/bg/bg-4 -1.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            backgroundRepeat: "no-repeat",
-            zIndex: 1,
-          }}>
-          <div
-            className="w-full h-full absolute left-0"
-            style={{
-              zIndex: 0,
-              transform: `translateY(${scrollY * 0.3 - 1000}px)`,
-              pointerEvents: "none",
-            }}>
-            <img src="./img/bg/bg-4-mask.png" className=" w-full h-full"></img>
-          </div>
 
-          <div>
-            <img
-              src="./img/affliu-soon.png"
-              className="md:w-[50vw] lg:mt-72 mt-48 hover:animate-scale"></img>
-          </div>
-          <div className="lg:w-[30vw] text-white text-center mt-12">
-            <p className="lg:text-[3.5vw] text-[24px] font-bold lg:flex text-[#6DE0F6]  lg:flex-col leading-tight">
-              High Quality 
-              <span className="text-white font-bold leading-none">
-                {" "}
-                Traffic from Trusted Sources
-              </span>
-            </p>
-
-            <p className="mt-8 md:text-[20px]">
-              Affilu connects iGaming brands with premium affiliate partners,
-              delivering traffic that converts. Our quality-driven network
-              ensures only the best affiliates promote your brand.
-            </p>
-
-            <div className="md:hidden">
-              <img src="./img/bg/bg-4 -1-2.png" className="50vw "></img>
-            </div>
-            <div className="md:mb-32 mb-12 flex items-center justify-center h-8">
-              {" "}
-              {/* <Button className="bg-[#F25411] flex text-xl md:py-5 py-2  md:px-8 px-4 items-center rounded-[35px] mt-0 md:mt-10 normal-case">
-                {exploreText}
-              </Button> */}
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="flex flex-col  items-center px-[10%] xxl:px-[15%] py-16 relative"
-          style={{
-            backgroundImage: "url('./img/bg/bg-5.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            backgroundRepeat: "no-repeat",
-          }}>
-          <div
-            className=" absolute left-0"
-            style={{
-              zIndex: 0,
-              transform: `translateY(${scrollY * 0.3 - 1400}px)`,
-              pointerEvents: "none",
-            }}>
-            <img src="./img/bg/bg-5-mask.png" className=" w-[75%] h-full"></img>
-          </div>
-          <span
-            className="md:text-[2.5vw] text-[20px] font-bold md:flex"
-            style={{ zIndex: 1 }}>
-            Unlock the full potential of
-            <p className="font-bold  ml-[1vw] text-[#6DE0F6]  md:border-b border-[#6DE0F6] md:border-b-[6px] leadin-none text-center md:text-left">
-              {" "}
-              your iGaming brand
-            </p>
-          </span>
-          <div className="my-16 hover:animate-scale" style={{ zIndex: 1 }}>
-            <img src="./img/unlock.png"></img>
-          </div>
-          <div className="md:flex " style={{ zIndex: 1 }}>
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left rounded-[20px] border hover:animate-scale border-[4px] border-black md:py-12 py-4 bg-white mb-8 md:mb-0">
-              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
-                CUSTOM SOLUTIONS
-              </span>
-              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
-                Our expert team delivers scalable web and mobile solutions
-                designed for the unique demands of the iGaming industry.
-              </p>
-            </div>
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left hover:animate-scale rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white mb-8 md:mb-0">
-              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-black flex flex-col leading-tight">
-                Technologies
-              </span>
-              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
-                From cutting-edge front-end development to secure, cloud-based
-                infrastructure, we cover everything you need to bring your
-                vision to life.
-              </p>
-            </div>
-
-            <div className="md:w-[23vw] md:px-12 px-6 text-center md:text-left hover:animate-scale rounded-[20px] border border-[4px] border-black md:py-12 py-4 md:ml-4 bg-white  md:mb-0">
-              <span className="md:text-[2.5vw] text-[25px] font-bold flex text-[#5700FF] flex flex-col leading-tight">
-                Blockchain & AI
-              </span>
-              <p className="md:mt-8 mt-2 md:text-[1.5vw] text-[14px]">
-                Leverage advanced technologies such as blockchain for secure
-                transactions and AI for data-driven player engagement.
-              </p>
-            </div>
-          </div>
-          <div className="">
-            <Button className="bg-[#0FC3C3] flex md:text-[22px] text-[18px] md:py-5 py-1 md:px-12 px-4 items-center rounded-[35px] mt-10">
-              <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank">Schedule a call</a>
-            </Button>
-          </div>
-        </div>
 
         <div id="consultancy"
           className="consultancy relative flex flex-col  items-start px-[10%] xxl:px-[15%] py-16 mt-[-40px]"
@@ -544,7 +419,7 @@ export default function Home() {
           <div className="flex flex-col md:pl-[15vw]  items-center justify-center  md:px-0 ">
             <span className="md:text-[2.3vw] text-[23px] font-bold flex">
               WHAT OUR
-              <p className="font-bold  ml-2 md:text-[#6DE0F6]  md:border-b md:border-[#6DE0F6] md:border-b-[6px] leadin-none">
+              <p className="font-bold  ml-2 md:text-[#6D12D8]  md:border-b md:border-[#6DE0F6] md:border-b-[6px] leadin-none">
                 {" "}
                 CLIENTS SAY
               </p>

@@ -72,7 +72,7 @@ export default function Home() {
             <div></div>
             <img
               src="./img/Octo.png"
-              className="w-[30vw] md:w-[20vw] hover:animate-scale"
+              className="w-[50vw] md:w-[30vw] hover:animate-scale"
               style={{
                 zIndex: 1,
               }}></img>
@@ -198,20 +198,20 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center justify-center ">
-        <p className=" md:text-[3vw] text-[25px] font-bold text-[#70E8FC] leading-none">
+        <p className=" md:text-[3vw] text-[25px] font-bold text-[#6D12D8] leading-none">
           Ready to elevate your{" "}
         </p>
         <p className=" md:text-[3vw] text-[25px] font-bold text-black">
           affiliate partnerships?
         </p>
         <div className="flex w-full justify-center items-center pb-8">
-          <Button className="bg-[#F25411] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
+          <Button className="bg-[#6D12D8] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
           <a href="/contact">Contact US</a>
           </Button>
         </div>
       </div>
 
-      <div className="">
+      {/* <div className="">
         <div
           className="retention h-[100vh] md:h-[150vh] px-[10%] xxl:px-[15%] pt-32 md:pt-0"
           style={{
@@ -282,7 +282,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         className="loyal flex flex-col items-center justify-center"
@@ -292,8 +292,8 @@ export default function Home() {
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
         }}>
-        <div className="mt-4 md:w-[30vw] hover:animate-scale w-[60vw]">
-          <img src="./img/rewards.png"></img>
+        <div className=" flex items-center justify-center mt-4 md:w-[50vw] hover:animate-scale w-[50vw]">
+          <img className="" src="./img/rewards.png"></img>
         </div>
         <div className="flex flex-col items-center md:w-[35vw] w-[90vw] justify-center mt-8">
           <p className=" md:text-[3vw] text-[25px] font-bold text-[#70E8FC] leading-none">
@@ -308,7 +308,7 @@ export default function Home() {
             today to learn more.
           </p>
           <div className="flex w-full justify-center items-center md:pb-8 pb-12">
-            <Button className="bg-[#F25411] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
+            <Button className="bg-[#6D12D8] flex text-xl px-8 items-center rounded-[30px] mt-10  normal-case">
             <a href="/contact">Contact US</a>
             </Button>
           </div>
@@ -316,7 +316,7 @@ export default function Home() {
       </div>
 
       <div
-        className="flex flex-col items-center justify-center bg-[#F25411] text-white md:pt-42 pt-12  md:pb-0 pb-12"
+        className="flex flex-col items-center justify-center bg-[#6D12D8] text-white md:pt-42 pt-12  md:pb-0 pb-12"
         style={{
           backgroundImage: "url('./img/bg/bg-affilue-5.png')",
           backgroundSize: "cover",
@@ -332,14 +332,14 @@ export default function Home() {
           platform, we turn social media into a powerful tool for engagement,
           loyalty, and growth.
         </p>
-        <div className="flex">
+        {/* <div className="flex">
           <p className="font-bold text-4xl mt-4">SWIPE</p>
           <div className="mt-8 ml-4 hover:animate-scale">
             <img src="./img/arrow.png"></img>
           </div>
-        </div>
-        <div className="flex lg:mb-24 pt-0 ">
-             <Swiper
+        </div> */}
+        <div className="flex lg:mb-24 pt-0 md:mt-32 mt-4 ">
+             {/* <Swiper
                 effect={'cards'}
                 grabCursor={true}
                 modules={[EffectCards]}
@@ -436,11 +436,52 @@ export default function Home() {
                   </div>
                 </SwiperSlide>
 
-              </Swiper>
+              </Swiper> */}
+
+              <div className="grid md:grid-cols-3 grid-cols-1 md:gap-12 gap-2 items-center justify-center mx-[10%]">
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Discord Community Management</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Create a vibrant community on Discord with our management services. We set up, manage, and nurture your Discord server to foster engagement, organize events, and ensure a dynamic interaction space that reflects your brand&apos;s values and connects deeply with users.
+                      </p>
+                </div>
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Influencer Collaboration</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      Connect with the perfect influencers to amplify your brand. We manage all aspects of influencer partnerships, from selection to campaign execution, ensuring influencers align with your brand values and reach your target demographics effectively.
+                      </p>
+                </div>
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Monthly Performance Reports</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text">
+                      See the bigger picture with clear, act  ionable i   nsights. Each month, we provide a detailed report on engagement, reach, and campaign performance, giving you a comprehensive view of your brand&apos;s social media impact.
+                      </p>
+                </div>
+
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Community Management</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                      Keep your followers engaged and loyal. Our team actively respond to comments  , messages, and feedback, buildi ng trust and a positive brand image that players want to be part of.
+                      </p>
+                </div>
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Content Creation &amp; Strategy</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center">
+                        Make your brand unforgettable with standout content. We develop a unique content strategy that reflects your brand&apos;s personality, crafting posts that entertain, inform, and spark conversations across all major platforms.
+                      </p>
+                </div>
+                <div className="bg-white text-white rounded-[40px] border border border-black border-[5px] px-8 py-8">
+                   <p className="md:text-3xl text-[12px] px-4 text-center font-bold text-black">Real-Time Engagement Monitoring</p>
+                      <p className="md:text-2xl text-[10px] text-black  md:mt-8 mt-2 md:px-4 px-2 text-center text">
+                      Stay a head with real-time insights. Our team continuously monitors engagement metrics and social trends, allowing us to adjust strategies quickly to maximize impact.
+                      </p>
+                </div>
+
+              </div>
 
          </div>
       </div>
-
+{/* 
       <div
         className="w-full h-[200px] md:block hidden"
         style={{
@@ -448,54 +489,74 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
-        }}></div>
+        }}></div> */}
 
-      <div className="flex flex-col items-center md:text-left text-center  justify-center mt-8">
+      <div className="flex flex-col items-center md:text-left text-center  justify-center md:mt-20 mt-4">
         <p className="md:text-[3vw] text-[30px] font-bold  text-black  leading-tight">
-          <span className="text-[#70E8FC]">Customer Service </span> MANAGED
-          SERVICES{" "}
+          <span className="text-[#70E8FC]">Some work We&apos;ve Done</span>
         </p>
-        <p className="md:px-[15%] px-[20px] md:text-2xl text-center mt-8">
-          Deliver exceptional support experiences that keep your players coming
-          back. Through our strong partnership with Workanova, we provide your
-          brand with seamless, round-the-clock customer service designed to
-          enhance player satisfaction and loyalty.
+        <p className=" md:text-2xl text-center mt-8 md:px-[20%] px-[20px]">
+        From emerging brands to established players, we&apos;ve helped clients turn performance goals into measurable growth. Our team has executed influencer campaigns, paid media strategies, and affiliate partnerships that deliver real conversions , not vanity metrics. Every project reflects our core focus &#58; data-driven marketing that scales reach, sharpens ROI, and drives sustainable acquisition.
         </p>
-        <div className="mt-8 grid md:grid-cols-2 gap-4 w-full md:px-[20%] px-[5%] md:mb-16">
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 hover:animate-scale">
-            <p className="text-black text-center">
-              <strong>24/7 Multilingual Support</strong> ensures constant assistance in mutliple languages. Our multilingual team provides immediate, knowledgeable assistance, ensuring a seamless experience wherever they are.
-            </p>
+        <div className="mt-8 flex md:flex-row flex-col gap-4 w-full md:px-[20%] px-[5%] md:mb-16">
+          {/* Left Side - Contains nested grid with 3 top elements and 2 bottom elements */}
+          <div className="flex-1 grid md:grid-cols-6 md:grid-rows-2 grid-cols-1 gap-4">
+            {/* Top Row - First Element */}
+            <div className="relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer md:col-span-2">
+              <img src="./img/work/1.png" alt="Work 1" className="w-full h-full object-cover" />
+            </div>
+            
+            {/* Top Row - Second Element */}
+            <div className="relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer md:col-span-2">
+              <img src="./img/work/2.png" alt="Work 2" className="w-full h-full object-cover" />
+            </div>
+            
+            {/* Top Row - Third Element */}
+            <div className="relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer md:col-span-2">
+              <video 
+                src="./img/work/1.mp4" 
+                controls 
+                className="w-full h-full object-cover"
+                preload="metadata"
+                autoPlay={true}
+                loop={true}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            
+            {/* Bottom Row - First Element */}
+            <div className="relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer md:col-span-3">
+            <video 
+              src="./img/work/3.mp4" 
+              controls 
+              className="w-full h-full object-cover"
+              preload="metadata"
+              autoPlay={1}
+              loop={true}
+            >
+              Your browser does not support the video tag.
+            </video>
+            </div>
+            
+            {/* Bottom Row - Second Element */}
+            <div className="relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer md:col-span-3">
+              <img src="./img/work/3.png" alt="Work 3" className="w-full h-full object-cover" />
+            </div>
           </div>
-
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
-            <p className="text-white text-center text-4xl font-bold">
-              Dedicated Player Assistance
-            </p>
-          </div>
-
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
-            <p className="text-white text-center text-4xl font-bold">
-              Proactive Issue Resolution
-            </p>
-          </div>
-
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full hover:animate-scale">
-            <p className="text-black text-center text-4xl font-bold">
-              PrAdvanced Support Tools
-            </p>
-          </div>
-
-          <div className="rounded-[20px] border-black border-[3px] bg-[#59DEEB] px-8 py-8 h-full hover:animate-scale">
-            <p className="text-black text-center text-4xl font-bold">
-              Real-Time Feedback & Continuous Improvement
-            </p>
-          </div>
-
-          <div className="rounded-[20px] border-black border-[3px] bg-[#6D12D8] px-8 py-8 h-full hover:animate-scale">
-            <p className="text-white text-center text-4xl font-bold">
-              Ready to elevate your customer support?
-            </p>
+          
+          {/* Right Side - Single element spanning both rows */}
+          <div className="md:w-[30%] w-full relative rounded-[20px] overflow-hidden border-2 border-black  cursor-pointer">
+            <video 
+              src="./img/work/2.mp4" 
+              controls 
+              className="w-full h-full object-cover"
+              preload="metadata"
+              autoPlay={true}
+              loop={true}
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

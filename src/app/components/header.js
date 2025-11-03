@@ -112,7 +112,7 @@ export default function Header() {
           </nav>
           <div className="flex items-center py-8">
             {" "}
-            <Button className="bg-[#D0098D] rounded-[30px] text-[20px] normal-case ml-4 font-normal flex ">
+            <Button className="bg-[#F14902] rounded-[30px] text-[20px] normal-case ml-4 font-normal flex ">
               <a href="https://calendar.app.google/9RhX95NA3kyXy2F46" target="_blank"> Schedule a Call</a>
              
               <img src="./img/phone.png" width={20} className="ml-3 mt-1"></img>

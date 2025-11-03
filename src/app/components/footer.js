@@ -31,14 +31,14 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* <div className="text-white">
+        <div className="text-white">
           <p className="font-semibold text-2xl">LOCATION</p>
           <p className="mt-8">Aff-Starter</p>
           <p className="mt-2">Address Line1</p>
           <p className="mt-2">Address Line2</p>
           <p className="mt-2">Address Line3</p>
           <p className="mt-2">Monday - Saturday:8AM - 4PM</p>
-        </div> */}
+        </div>
 
         <div className="text-white flex flex-col">
           <p className="font-semibold text-2xl">CONTACT WITH US</p>
