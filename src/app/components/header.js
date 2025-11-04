@@ -69,10 +69,10 @@ export default function Header() {
           className="object-contain" onClick={() => router.push('/')}></img>
 
         <div className="flex hidden lg:flex">
-          <nav class=" text-[1.3vw] flex items-center text-white">
+          <nav class=" text-[1.1vw] flex items-center text-white">
             <a
               href="/"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Home
             </a>
             {/* {pathname === "/" && (
@@ -84,7 +84,7 @@ export default function Header() {
             )} */}
             <a
               href="/service"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Managed Services
             </a>
             {/* {pathname === "/" && (
@@ -96,17 +96,17 @@ export default function Header() {
             )} */}
             <a
               href="/pricing"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Pricing
             </a>
             <a
               href="/simulation"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Simulation Tool
             </a>
             <a
               href="/contact"
-              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold font-['regular']">
+              className="hover:bg-white hover:text-[#0C0834] px-[10px] py-2 rounded transition font-bold" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Contact Us
             </a>
           </nav>

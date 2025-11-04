@@ -91,12 +91,12 @@ export default function Home() {
           <div className="lg:hidden block">
             <img src="./img/mobile/1.png"></img>
           </div>
-          <div className="mt-4 flex flex-col justify-center px-[10%] text-center lg:justify-start lg:px-0 lg:text-start">
+          <div className=" mt-4 flex flex-col justify-center px-[10%] text-center lg:justify-start lg:px-0 lg:text-start" style={{ fontFamily: 'Poppins, sans-serif' }}>
             <motion.p
               initial={{ opacity: 0, z: 20 }}
               animate={{ opacity: 1, z: 0 }}
               transition={{ duration: 0.3 }}
-              class=" text-black font-bold">
+              class=" text-black font-[800]">
               Empowering
             </motion.p>
 
@@ -105,7 +105,7 @@ export default function Home() {
               initial={{ opacity: 0, z: 20 }}
               animate={{ opacity: 1, z: 0 }}
               transition={{ duration: 0.3 }}
-              class=" text-black font-bold">
+              class=" text-black font-[800]">
               iGaming Brands
             </motion.p>
             <div className="relative inline-block">
@@ -113,14 +113,14 @@ export default function Home() {
                 initial={{ opacity: 0, z: 20 }}
                 animate={{ opacity: 1, z: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-[#6DE0F6] font-bold">
+                className="text-[#6D12D8] font-[800]">
                 to Grow and Thrive
               </motion.p>
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.8 }}
-                className="absolute h-1 bg-[#6DE0F6]  bottom-[-4] left-0"
+                className="absolute h-1 bg-[#6D12D8]  bottom-[-4] left-0"
               />
             </div>
             <p className="text-black xxl:text-3xl text-[20px] leading-[1.3] mt-12">
@@ -236,7 +236,7 @@ export default function Home() {
               Managed Services to{" "}
               <span className="text-[#6DE0F6] ml-2"> Elevate Your Brand</span>
             </p>
-            <p className="lg:text-2xl text-[18px]  lg:px-[10%] text-center mt-8">
+            <p className="lg:text-2xl text-[18px]  lg:px-[10%] text-center mt-8" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Aff-Starter offers a full suite of managed services designed to
               drive player retention, boost traffic, and deliver top-tier
               customer support. From affiliate management to social media
@@ -259,7 +259,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:absolute lg:left-[3vw] lg:top-[11vw] lg:w-[12vw] lg:px-0 lg:mt-4 mt-4 px-8  flex justify-center items-center">
-                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
+                <p className=" font-normal lg:text-[1.5vw] text-[18px]" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Drive high-quality traffic and optimize conversions.
                 </p>
               </div>
@@ -278,7 +278,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:absolute  lg:left-[4vw] lg:top-[10vw] lg:w-[14vw] lg:px-0 lg:mt-0 mt-4 px-8 flex justify-center items-center">
-                <p className=" font-normal lg:text-[1.5vw] text-[18px]">
+                <p className=" font-normal lg:text-[1.5vw] text-[18px]" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Boost visibility and engagement with targeted social
                   campaigns.
                 </p>
@@ -340,7 +340,7 @@ export default function Home() {
                   </span>
                 </p>
 
-                <p className="mt-8 lg:text-[1.5vw] text-[12px] text-center">
+                <p className="mt-8 lg:text-[1.4vw] text-[12px] text-left" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Revolutionise player engagement with our QuestTracker
                   platform, combining gamification with social media integration
                   for an immersive experience that drives player loyalty.
@@ -382,7 +382,7 @@ export default function Home() {
                 </span>
               </span>
 
-              <p className="mt-8 md:text-[1.5vw] text-[13px] text-white">
+              <p className="mt-8 md:text-[1.5vw] text-[13px] text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Leverage our industry expertise with tailored consultancy
                 services, ranging from payment solutions to legal setup, helping
                 you navigate complex regulatory landscapes.
@@ -420,7 +420,7 @@ export default function Home() {
                 CLIENTS SAY
               </p>
             </span>
-            <p className="md:text-[1.5vw] mt-8 text-center md:text-left px-8 md:px-0">
+            <p className="md:text-[1.5vw] mt-8 text-center md:text-left px-8 md:px-0" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Don&apos;t take our word for it—see how we&apos;ve helped brands like yours
               grow and succeed in the competitive iGaming industry
             </p>
