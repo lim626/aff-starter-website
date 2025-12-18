@@ -17,7 +17,7 @@
     "ag-grid-react": "^32.3.3",
     "axios": "^1.7.2",
     "framer-motion": "^11.12.0",
-    "next": "14.2.4",
+    "next": "14.2.35",
     "next-redux-wrapper": "^8.1.0",
     "nodemailer": "^6.10.0",
     "react": "^18",
